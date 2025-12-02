@@ -1,12 +1,9 @@
 import React from "react";
 import "./ProfileIcon.css";
+import type { User } from "../../../../../../types/User";
 
 interface ProfileIconProps {
-  user: {
-    name: string;
-    email: string;
-    avatar: string;
-  };
+  user: User;
 }
 
 const ProfileIcon = ({ user }: ProfileIconProps) => {

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@caldwell619/react-kanban": "^0.0.12",
+    "node-waves": "^0.7.6",
     "react": "^19.1.1",
     "react-datepicker": "^8.10.0",
     "react-dom": "^19.1.1",

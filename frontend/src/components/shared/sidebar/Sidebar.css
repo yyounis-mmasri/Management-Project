@@ -1,7 +1,7 @@
 .sidebar {
   min-height: 100%;
   width: var(--sidebar-width);
-  background-color: white;
+  background-color: var(--sidebar-bg);
   color: white;
   display: flex;
   flex-direction: column;
@@ -12,8 +12,8 @@
   z-index: 1201;
   overflow-y: auto;
   overflow-x: visible;
-  transition: width 0.3s ease;
-  border: 1px solid #ddd;
+  transition: width var(--transition-normal);
+  border: 1px solid var(--sidebar-border);
   gap: 1rem;
 }
 
@@ -33,11 +33,11 @@
   font-size: 0.6875rem;
   line-height: 1.5;
   font-weight: 700;
-  color: #555;
+  color: var(--layout-text-tertiary);
   cursor: pointer;
   margin-bottom: 10px;
   gap: 0;
-  transition: gap 0.3s ease;
+  transition: gap var(--transition-normal);
 }
 
 .down-arrow {
@@ -51,22 +51,23 @@
   height: 0.7rem;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity var(--transition-normal),
+    transform var(--transition-normal);
 }
 
 .overview-header:hover {
   gap: 0.3rem;
-  transition: gap 0.3s ease;
+  transition: gap var(--transition-normal);
 }
 
 .overview-header:hover .down-arrow img {
   opacity: 1;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-normal);
 }
 
 .down-arrow.closed img {
   transform: rotate(-90deg);
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-normal);
 }
 
 .overview-links {

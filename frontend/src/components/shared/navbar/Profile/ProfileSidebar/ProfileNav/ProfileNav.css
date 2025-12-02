@@ -6,11 +6,12 @@
   border-radius: 0.4rem;
   padding: 0.5rem;
   width: 100%;
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-normal);
+  position: relative;
 }
 
 .profile-nav:hover {
-  background-color: #f5f5f5;
+  background-color: var(--layout-bg-gray-subtle);
 }
 
 .profile-nav__icon {
@@ -22,12 +23,12 @@
   font-size: 0.875rem;
   font-weight: 400;
   margin-left: 1rem;
-  color: #333;
+  color: var(--layout-text-secondary);
 }
 
 .profile-nav__count {
-  background-color: #e0e0e0;
-  border-radius: 0.5rem;
+  background-color: var(--layout-bg-gray-hover);
+  border-radius: var(--radius-md);
   font-size: 0.7rem;
   font-weight: 600;
   padding: 0.4rem 0.6rem;

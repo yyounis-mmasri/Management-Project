@@ -2,17 +2,14 @@ import React from "react";
 import "./ProfileSwitch.css";
 import Tooltip from "../../../../../../utils/Tooltip/Tooltip";
 import users from "../../../../../../mocks/users.json";
+import { currentUser } from "../../../../../../utils/currentUser";
 
-interface ProfileSwitchProps {
-  currentUserId: number;
-}
-
-const ProfileSwitch = ({ currentUserId }: ProfileSwitchProps) => {
+const ProfileSwitch = () => {
   return (
     <div className="profile__switch">
       {users.map(
         (u, i) =>
-          u.id !== currentUserId &&
+          u.id !== currentUser?.id &&
           i <= 3 && (
             <Tooltip key={u.id} text={`Switch to: ${u.name}`}>
               <img

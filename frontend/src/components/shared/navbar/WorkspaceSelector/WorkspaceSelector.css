@@ -9,6 +9,7 @@
   gap: 10px;
   padding: 0.25rem 0;
   cursor: pointer;
+  position: relative;
 }
 
 .workspace-selector .workspace-logo {
@@ -24,10 +25,10 @@
 
 .workspace-selector .workspace-access {
   font-size: 0.75rem;
-  color: #272727;
-  background-color: #f0f0f0;
+  color: var(--layout-text-workspace);
+  background-color: var(--layout-bg-gray);
   padding: 0.125rem 0.5rem;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-sm);
   font-weight: 500;
 }
 
@@ -47,21 +48,15 @@
 
 .workspace-dropdown {
   position: absolute;
-  top: 100%; /* directly below the selector */
+  top: 100%;
   left: 0;
   width: 15rem;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
+  background-color: var(--layout-bg-white);
+  box-shadow: 0 4px 8px var(--layout-shadow-medium);
+  border-radius: var(--radius-md);
   z-index: 20;
   padding: 0.5rem;
-  background: linear-gradient(
-    to bottom left,
-    rgba(246, 252, 255, 0.99) 0%,
-    rgba(255, 255, 255, 0.99) 40%,
-    rgba(255, 255, 255, 0.99) 60%,
-    rgba(255, 246, 252, 0.99) 100%
-  );
+  background: var(--workspace-dropdown-gradient);
   backdrop-filter: blur(6px);
 }
 
@@ -72,13 +67,14 @@
   padding: 0.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
+  position: relative;
 }
 
 .divider {
   height: 1px;
-  background-color: #e0e0e0;
+  background-color: var(--layout-bg-gray-hover);
   margin: 0.5rem 0;
-  border: 1px dashed rgba(145 158 171 / 20%);
+  border: 1px dashed var(--layout-border-divider);
   border-width: 0px 0px thin;
 }
 
@@ -90,10 +86,11 @@
   gap: 1rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  position: relative;
 }
 
 .workspace-create:hover {
-  background-color: #f0f0f08c;
+  background-color: var(--layout-bg-gray-alpha);
 }
 
 .workspace-plus-sign {
@@ -105,7 +102,7 @@
   width: fit-content;
   font-size: 0.75rem;
   font-weight: 500;
-  color: #1c252e;
+  color: var(--layout-text-primary);
   border: none;
   background-color: transparent;
   justify-content: start;

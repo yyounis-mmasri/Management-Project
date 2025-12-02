@@ -3,12 +3,13 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: #333;
+  color: var(--layout-text-secondary);
   width: 100%;
   padding: 0.25rem 0.5rem 0.25rem 0.75rem;
   line-height: 2rem;
   border-radius: 4px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .sidebar-link img {
@@ -17,11 +18,11 @@
 }
 
 .sidebar-link:hover {
-  background-color: #f0f0f0;
+  background-color: var(--layout-bg-gray);
 }
 
 .sidebar-link.is-active {
-  background-color: rgba(87, 201, 87, 0.171);
+  background-color: var(--sidebar-link-active-bg);
   font-weight: 600;
   position: relative;
 }

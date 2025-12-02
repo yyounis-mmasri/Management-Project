@@ -4,34 +4,35 @@
   gap: 0.5rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  position: relative;
 }
 
 .workspace-option:hover {
-  background-color: #f0f0f08c;
+  background-color: var(--layout-bg-gray-alpha);
 }
 
 .workspace-logo {
   width: 1.5rem;
   height: 1.5rem;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-sm);
 }
 
 .workspace-name {
   font-size: 1rem;
-  color: #333;
+  color: var(--layout-text-secondary);
   width: 100%;
 }
 
 .workspace-access {
   font-size: 0.7rem;
-  color: #1c252e;
+  color: var(--layout-text-primary);
   padding: 0.3rem;
-  background-color: #919eab29;
+  background-color: var(--layout-bg-gray-badge);
   border-radius: 0.3rem;
   font-weight: 500;
 }
 
 .workspace-access.pro {
-  background-color: #00b8d929;
-  color: #006c9c;
+  background-color: var(--layout-accent-cyan);
+  color: var(--layout-accent-cyan-text);
 }

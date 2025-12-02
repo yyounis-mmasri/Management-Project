@@ -3,14 +3,16 @@
   align-items: center;
   height: 2.25rem;
   padding: 0 0.4em;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  background-color: #f3f3f3;
+  border: 1px solid var(--layout-border-medium);
+  border-radius: var(--radius-xl);
+  background-color: var(--layout-bg-gray-light);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .search-bar:hover {
-  background-color: #e0e0e0;
+  background-color: var(--layout-bg-gray-hover);
 }
 
 .search-bar img {
@@ -22,7 +24,7 @@
 .search-bar span {
   color: black;
   font-size: 0.75rem;
-  background-color: white;
+  background-color: var(--layout-bg-white);
   padding: 0.4rem;
   border-radius: 6px;
 }

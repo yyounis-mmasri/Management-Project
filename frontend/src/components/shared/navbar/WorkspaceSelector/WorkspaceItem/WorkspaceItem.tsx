@@ -1,14 +1,10 @@
 import React from "react";
 import "./WorkspaceItem.css";
+import handleWorkspaceSelect from "../../../../../utils/handleWorkspaceSelect";
+import type { Workspace } from "../../../../../types/Workspace";
 
 interface WorkspaceItemProps {
-  workspace: {
-    id: string;
-    logo: string;
-    alt: string;
-    name: string;
-    access: string;
-  };
+  workspace: Workspace;
   setCurrentWorkspace: (workspace: WorkspaceItemProps["workspace"]) => void;
   setIsOpen: (isOpen: boolean) => void;
 }
@@ -22,11 +18,7 @@ const WorkspaceItem = ({
     <div
       key={workspace.id}
       className="workspace-option"
-      onClick={(e) => {
-        e.stopPropagation();
-        setCurrentWorkspace(workspace);
-        setIsOpen(false);
-      }}
+      onClick={handleWorkspaceSelect(workspace, setCurrentWorkspace, setIsOpen)}
     >
       <img
         src={workspace.logo}

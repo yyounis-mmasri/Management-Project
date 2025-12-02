@@ -1,20 +1,20 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "name": "Team 1",
     "logo": "/workspace-logos/ws1.webp",
     "alt": "Team 1",
     "access": "Free"
   },
   {
-    "id": "2",
+    "id": 2,
     "name": "Team 2",
     "logo": "/workspace-logos/ws2.webp",
     "alt": "Team 2",
     "access": "Pro"
   },
   {
-    "id": "3",
+    "id": 3,
     "name": "Team 3",
     "logo": "/workspace-logos/ws3.webp",
     "alt": "Team 3",
