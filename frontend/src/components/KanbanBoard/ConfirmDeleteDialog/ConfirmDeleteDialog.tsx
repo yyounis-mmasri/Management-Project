@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { createPortal } from "react-dom";
 import handleCardRemove from "../../../utils/handleCardRemove";
 import "./ConfirmDeleteDialog.css";

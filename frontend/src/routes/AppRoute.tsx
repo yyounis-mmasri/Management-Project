@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import type { ReactElement } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import PublicRoute from "./PublicRoute";

@@ -1,4 +1,3 @@
-import React from "react";
 import kanbanCardTabs from "./kanbanCardTabs";
 import "./KanbanCardTabs.css";
 import type { BoardCard } from "../../../types/BoardCard";

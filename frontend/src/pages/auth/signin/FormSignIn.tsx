@@ -1,6 +1,6 @@
-import React, { type FC } from 'react';
-import { Link } from 'react-router-dom';
-import './SignIn.css';
+import { type FC } from "react";
+import { Link } from "react-router-dom";
+import "./SignIn.css";
 
 interface Props {
   email: string;
@@ -47,7 +47,7 @@ const FormSignIn: FC<Props> = ({
         </div>
         <div className="password-input-wrapper">
           <input
-            type={showPassword ? 'text' : 'password'}
+            type={showPassword ? "text" : "password"}
             className="form-input"
             value={password}
             onChange={(e) => onPasswordChange(e.target.value)}
@@ -59,7 +59,7 @@ const FormSignIn: FC<Props> = ({
             onClick={onToggleShow}
             aria-label="Toggle password visibility"
           >
-            {showPassword ? '👁️' : '👁️‍🗨️'}
+            {showPassword ? "👁️" : "👁️‍🗨️"}
           </button>
         </div>
       </div>

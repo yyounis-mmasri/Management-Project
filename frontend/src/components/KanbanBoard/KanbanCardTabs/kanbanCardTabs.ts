@@ -1,5 +1,3 @@
-import React from "react";
-
 const kanbanCardTabs = [
   { id: "overview", label: "Overview" },
   { id: "subtasks", label: "Subtasks" },

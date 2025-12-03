@@ -1,4 +1,3 @@
-import React from "react";
 import "./ProfileNav.css";
 import { Link } from "react-router-dom";
 

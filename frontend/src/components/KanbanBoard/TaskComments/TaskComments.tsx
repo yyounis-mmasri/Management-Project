@@ -1,4 +1,3 @@
-import React from "react";
 import "./TaskComments.css";
 import type { BoardCard } from "../../../types/BoardCard";
 import CommentItem from "./CommentItem/CommentItem";

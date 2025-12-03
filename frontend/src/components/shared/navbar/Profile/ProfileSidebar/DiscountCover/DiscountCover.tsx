@@ -1,4 +1,3 @@
-import React from "react";
 import "./DiscountCover.css";
 import { assets } from "../../../../../../assets/assets";
 

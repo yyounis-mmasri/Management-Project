@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./CommentItem.css";
 import type { Comment } from "../../../../types/Comment";
 import AttachmentList from "../AttachmentList/AttachmentList";

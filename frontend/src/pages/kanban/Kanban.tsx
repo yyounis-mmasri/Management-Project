@@ -1,4 +1,3 @@
-import React from "react";
 import "@caldwell619/react-kanban/dist/styles.css";
 import "./Kanban.css";
 import KanbanBoard from "../../components/KanbanBoard/KanbanBoard";

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./WorkspaceSelector.css";
 import workspacesData from "../../../../mocks/workspaces.json";
 import { assets } from "../../../../assets/assets";

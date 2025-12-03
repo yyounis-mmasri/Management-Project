@@ -1,4 +1,3 @@
-import React from "react";
 import "./Navbar.css";
 import WorkspaceSelector from "./WorkspaceSelector/WorkspaceSelector";
 import SearchBar from "./SearchBar/SearchBar";

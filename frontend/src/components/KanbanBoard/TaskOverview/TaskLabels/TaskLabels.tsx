@@ -1,4 +1,3 @@
-import React from "react";
 import "./TaskLabels.css";
 import type { BoardCard } from "../../../../types/BoardCard";
 

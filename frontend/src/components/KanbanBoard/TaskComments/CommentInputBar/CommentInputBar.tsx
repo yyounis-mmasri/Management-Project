@@ -1,4 +1,3 @@
-import React from "react";
 import { currentUser } from "../../../../utils/currentUser";
 import "./CommentInputBar.css";
 import { assets } from "../../../../assets/assets";

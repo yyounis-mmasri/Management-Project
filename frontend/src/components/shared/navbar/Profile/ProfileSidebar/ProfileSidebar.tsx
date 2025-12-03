@@ -1,4 +1,3 @@
-import React from "react";
 import "./ProfileSidebar.css";
 import { assets } from "../../../../../assets/assets";
 import users from "../../../../../mocks/users.json";

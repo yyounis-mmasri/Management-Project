@@ -1,4 +1,3 @@
-import React from "react";
 import type { BoardCard } from "../../../../types/BoardCard";
 import "./TaskReporter.css";
 

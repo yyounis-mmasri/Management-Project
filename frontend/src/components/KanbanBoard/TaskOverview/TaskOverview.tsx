@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import "./TaskOverview.css";
 import type { BoardCard } from "../../../types/BoardCard";
 import CardTitle from "./CardTitle/CardTitle";

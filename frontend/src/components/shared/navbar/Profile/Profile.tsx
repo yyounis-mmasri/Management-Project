@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Profile.css";
 import { assets } from "../../../../assets/assets";
 import ProfileSidebar from "./ProfileSidebar/ProfileSidebar";

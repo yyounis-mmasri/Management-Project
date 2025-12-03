@@ -1,4 +1,3 @@
-import React from "react";
 import "./ProfileSwitch.css";
 import Tooltip from "../../../../../../utils/Tooltip/Tooltip";
 import users from "../../../../../../mocks/users.json";

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import type { BoardCard } from "../../types/BoardCard";
 import type { ColumnHeaderBag } from "../../types/ColumnHeaderBag";
 import { UncontrolledBoard } from "@caldwell619/react-kanban";

@@ -1,4 +1,3 @@
-import React from "react";
 import "./ProfileIcon.css";
 import type { User } from "../../../../../../types/User";
 

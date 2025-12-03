@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./TaskAssignees.css";
 import type { BoardCard } from "../../../../types/BoardCard";
 import Tooltip from "../../../../utils/Tooltip/Tooltip";

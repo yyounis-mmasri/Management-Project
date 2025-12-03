@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./SwitchBox.css";
 
 interface SwitchBoxProps {

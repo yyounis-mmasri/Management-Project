@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Sidebar.css";
 import SidebarLogo from "./SidebarLogo/SidebarLogo";
 import { assets } from "../../../assets/assets";

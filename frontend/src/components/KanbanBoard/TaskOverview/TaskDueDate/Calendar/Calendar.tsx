@@ -1,4 +1,3 @@
-import React from "react";
 import { createPortal } from "react-dom";
 import DatePicker from "react-datepicker";
 import startDateHandler from "../../../../../utils/date/startDateHandler";

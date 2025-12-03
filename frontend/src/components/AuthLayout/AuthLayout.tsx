@@ -1,7 +1,7 @@
-import React, { type ReactNode } from 'react';
-import './AuthLayout.css';
+import { type ReactNode } from "react";
+import "./AuthLayout.css";
 import logo from "../../assets/signup-logo.svg";
-import { providers } from '../../constants/providers';
+import { providers } from "../../constants/providers";
 
 interface AuthLayoutProps {
   children: ReactNode;
@@ -9,8 +9,8 @@ interface AuthLayoutProps {
 }
 
 export default function AuthLayout({
-children,
-  illustration = 'https://pub-c5e31b5cdafb419fb247a8ac2e78df7a.r2.dev/public/assets/illustrations/illustration-dashboard.webp',
+  children,
+  illustration = "https://pub-c5e31b5cdafb419fb247a8ac2e78df7a.r2.dev/public/assets/illustrations/illustration-dashboard.webp",
 }: AuthLayoutProps) {
   return (
     <div className="auth-container">
@@ -46,9 +46,7 @@ children,
       </div>
 
       {/* Right Section - Form Content */}
-      <div className="auth-right">
-        {children}
-      </div>
+      <div className="auth-right">{children}</div>
     </div>
   );
 }

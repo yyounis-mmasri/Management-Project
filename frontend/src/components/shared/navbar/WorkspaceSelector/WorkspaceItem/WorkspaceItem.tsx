@@ -1,4 +1,3 @@
-import React from "react";
 import "./WorkspaceItem.css";
 import handleWorkspaceSelect from "../../../../../utils/handleWorkspaceSelect";
 import type { Workspace } from "../../../../../types/Workspace";

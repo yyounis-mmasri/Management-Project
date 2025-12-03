@@ -1,4 +1,3 @@
-import React from "react";
 import handleInputFocus from "../../../utils/handleInputFocus";
 import { assets } from "../../../assets/assets";
 

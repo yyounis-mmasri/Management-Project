@@ -1,4 +1,4 @@
-import React, { type ReactNode } from "react";
+import { type ReactNode } from "react";
 import "./Layout.css";
 import { Sidebar } from "../shared/sidebar/Sidebar";
 import { Navbar } from "../shared/navbar/Navbar";

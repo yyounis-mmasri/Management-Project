@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./KanbanTaskbar.css";
 import KanbanCardStatus from "../KanbanCardStatus/KanbanCardStatus";
 import KanbanCardActions from "../KanbanCardActions/KanbanCardActions";
