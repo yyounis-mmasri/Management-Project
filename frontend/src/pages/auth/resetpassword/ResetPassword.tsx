@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import AuthLayout from "../../../components/AuthLayout/AuthLayout";
+import { validateEmail, AUTH_CONSTANTS } from "../../../utils/auth";
 import "./ResetPassword.css";
 
 const ResetPassword: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
+    
+    if (!validateEmail(email)) {
+      setError('Please enter a valid email address');
+      return;
+    }
+
+    // In production, this would call an API
+    console.log('Password reset requested for:', email);
+    setSuccess(true);
+  };
   return (
     <AuthLayout>
       <div className="reset-password-container">
@@ -22,17 +40,30 @@ const ResetPassword: React.FC = () => {
           email you a link to reset your password.
         </p>
 
-        <form className="reset-form">
+        <form className="reset-form" onSubmit={handleSubmit}>
           {/* Email Input */}
           <div className="form-group">
-            <label className="form-label">Email address</label>
+            <label className="form-label" htmlFor="reset-email">Email address</label>
             <input
               type="email"
+              id="reset-email"
               className="form-input"
               placeholder="example@gmail.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
+
+          {/* Error message */}
+          {error && <div className="error-message">{error}</div>}
+          
+          {/* Success message */}
+          {success && (
+            <div className="success-message">
+              {AUTH_CONSTANTS.MESSAGES.RESET_EMAIL_SENT}
+            </div>
+          )}
 
           {/* Submit Button */}
           <button type="submit" className="submit-button">

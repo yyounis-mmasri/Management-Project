@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom'; //  added Link
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../../context/AuthContext';
 import AuthLayout from '../../../components/AuthLayout/AuthLayout';
+import { 
+  validateCredentials, 
+  AUTH_CONSTANTS,
+  createPasswordToggleHandler 
+} from '../../../utils/auth';
 import './SignIn.css';
 import FormSignIn from './FormSignIn';
 
@@ -11,10 +16,6 @@ const SignIn: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
 
-  // Hardcoded credentials
-  const VALID_EMAIL = 'demo@minimals.cc';
-  const VALID_PASSWORD = '@2Minimal';
-
   const { login } = useAuth();
   const navigate = useNavigate();
 
@@ -22,13 +23,15 @@ const SignIn: React.FC = () => {
     e.preventDefault();
     setError('');
 
-    if (email === VALID_EMAIL && password === VALID_PASSWORD) {
+    if (validateCredentials(email, password)) {
       login();
       navigate('/kanban', { replace: true });
     } else {
-      setError('Invalid email or password');
+      setError(AUTH_CONSTANTS.MESSAGES.INVALID_CREDENTIALS);
     }
   };
+
+  const togglePassword = createPasswordToggleHandler(setShowPassword);
 
   return (
     <AuthLayout>
@@ -44,7 +47,7 @@ const SignIn: React.FC = () => {
         <div className="demo-info">
           <div className="info-icon">ℹ️</div>
           <div className="info-text">
-            Use <strong>demo@minimals.cc</strong> with password <strong>@2Minimal</strong>
+            Use <strong>{AUTH_CONSTANTS.DEMO_EMAIL}</strong> with password <strong>{AUTH_CONSTANTS.DEMO_PASSWORD}</strong>
           </div>
         </div>
 
@@ -55,7 +58,7 @@ const SignIn: React.FC = () => {
           error={error}
           onEmailChange={setEmail}
           onPasswordChange={setPassword}
-          onToggleShow={() => setShowPassword((v) => !v)}
+          onToggleShow={togglePassword}
           onSubmit={handleSubmit}
         />
       </div>

@@ -1,13 +1,9 @@
 import { useState } from "react";
+import { createPasswordToggleHandler } from "../../../utils/auth";
 import handleChange from "../../../utils/handleChange";
 import handleSubmit from "../../../utils/handleSubmit";
+import type { SignUpFormData } from "../../../types/auth";
 import "./SignUp.css";
-interface SignUpFormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-}
 
 export default function SignUpForm() {
   const [formData, setFormData] = useState<SignUpFormData>({
@@ -18,6 +14,7 @@ export default function SignUpForm() {
   });
 
   const [showPassword, setShowPassword] = useState<boolean>(false);
+  const togglePassword = createPasswordToggleHandler(setShowPassword);
 
   return (
     <form onSubmit={(e) => handleSubmit(e, formData)} className="auth-form">
@@ -66,18 +63,18 @@ export default function SignUpForm() {
             type={showPassword ? "text" : "password"}
             id="password"
             name="password"
+            placeholder="6+ characters"
             value={formData.password}
             onChange={(e) => handleChange(e, setFormData)}
-            placeholder="6+ characters"
             required
           />
           <button
             type="button"
             className="password-toggle"
-            onClick={() => setShowPassword(!showPassword)}
+            onClick={togglePassword}
             aria-label="Toggle password visibility"
           >
-            {showPassword ? "👁️" : "🐾"}
+            {showPassword ? "👁️" : "🔒"}
           </button>
         </div>
       </div>

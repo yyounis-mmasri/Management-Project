@@ -1,0 +1,158 @@
+/**
+ * CSS Variables for Authentication Pages
+ * Centralizes colors, spacing, typography, and other design tokens
+ */
+
+:root {
+  /* ========== Colors ========== */
+  
+  /* Primary Colors */
+  --auth-primary-color: #10b981;
+  --auth-primary-hover: #059669;
+  --auth-primary-light: #d1fae5;
+  
+  /* Secondary Colors */
+  --auth-secondary-color: #00a854;
+  --auth-secondary-hover: #008c3a;
+  
+  /* Dark Colors */
+  --auth-dark-bg: #1f2937;
+  --auth-dark-bg-hover: #111827;
+  --auth-dark-bg-active: #030712;
+  --auth-dark-text: #1a1a1a;
+  --auth-dark-text-secondary: #1a1d29;
+  
+  /* Gray Scale */
+  --auth-gray-50: #f9fafb;
+  --auth-gray-100: #f3f4f6;
+  --auth-gray-200: #e5e7eb;
+  --auth-gray-300: #d1d5db;
+  --auth-gray-400: #9ca3af;
+  --auth-gray-500: #6b7280;
+  --auth-gray-600: #4b5563;
+  --auth-gray-700: #374151;
+  --auth-gray-800: #1f2937;
+  --auth-gray-900: #111827;
+  
+  /* Text Colors */
+  --auth-text-primary: #1a1a1a;
+  --auth-text-secondary: #6b7280;
+  --auth-text-tertiary: #8e92a3;
+  --auth-text-disabled: #a8adb5;
+  --auth-text-placeholder: #9ca3af;
+  
+  /* Background Colors */
+  --auth-bg-primary: #ffffff;
+  --auth-bg-secondary: #f5f7fa;
+  --auth-bg-tertiary: #fafbfc;
+  --auth-bg-input: #ffffff;
+  --auth-bg-input-focus: #ffffff;
+  
+  /* Border Colors */
+  --auth-border-color: #d1d5db;
+  --auth-border-color-hover: #10b981;
+  --auth-border-color-focus: #10b981;
+  --auth-border-color-light: #dfe3e8;
+  
+  /* Status Colors */
+  --auth-error-bg: #fee2e2;
+  --auth-error-border: #fca5a5;
+  --auth-error-text: #dc2626;
+  
+  --auth-success-bg: #d1fae5;
+  --auth-success-border: #6ee7b7;
+  --auth-success-text: #059669;
+  
+  --auth-info-bg: #dbeafe;
+  --auth-info-border: #93c5fd;
+  --auth-info-text: #1e40af;
+  --auth-info-text-dark: #1e3a8a;
+  
+  --auth-warning-bg: #fef3c7;
+  --auth-warning-border: #fde68a;
+  --auth-warning-text: #f59e0b;
+  --auth-warning-icon: #fbbf24;
+  
+  /* ========== Typography ========== */
+  
+  /* Font Sizes */
+  --auth-font-xs: 0.75rem;      /* 12px */
+  --auth-font-sm: 0.875rem;     /* 14px */
+  --auth-font-base: 1rem;       /* 16px */
+  --auth-font-lg: 1.125rem;     /* 18px */
+  --auth-font-xl: 1.25rem;      /* 20px */
+  --auth-font-2xl: 1.5rem;      /* 24px */
+  --auth-font-3xl: 1.875rem;    /* 30px */
+  --auth-font-4xl: 2.25rem;     /* 36px */
+  
+  /* Font Weights */
+  --auth-font-normal: 400;
+  --auth-font-medium: 500;
+  --auth-font-semibold: 600;
+  --auth-font-bold: 700;
+  
+  /* Line Heights */
+  --auth-line-height-tight: 1.2;
+  --auth-line-height-normal: 1.5;
+  --auth-line-height-relaxed: 1.6;
+  
+  /* ========== Spacing ========== */
+  
+  --auth-space-xs: 4px;
+  --auth-space-sm: 8px;
+  --auth-space-md: 12px;
+  --auth-space-lg: 16px;
+  --auth-space-xl: 20px;
+  --auth-space-2xl: 24px;
+  --auth-space-3xl: 32px;
+  --auth-space-4xl: 40px;
+  --auth-space-5xl: 48px;
+  
+  /* ========== Border Radius ========== */
+  
+  --auth-radius-sm: 4px;
+  --auth-radius-md: 6px;
+  --auth-radius-lg: 8px;
+  --auth-radius-xl: 12px;
+  --auth-radius-full: 9999px;
+  
+  /* ========== Shadows ========== */
+  
+  --auth-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --auth-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --auth-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --auth-shadow-focus: 0 0 0 3px rgba(16, 185, 129, 0.1);
+  --auth-shadow-focus-alt: 0 0 0 3px rgba(0, 168, 84, 0.1);
+  
+  /* ========== Transitions ========== */
+  
+  --auth-transition-fast: 0.15s ease;
+  --auth-transition-base: 0.2s ease;
+  --auth-transition-slow: 0.3s ease;
+  
+  /* ========== Layout ========== */
+  
+  --auth-container-max-width: 420px;
+  --auth-container-padding: 40px;
+  --auth-form-gap: 20px;
+  --auth-input-height: 44px;
+  --auth-button-height: 48px;
+  
+  /* ========== Z-Index ========== */
+  
+  --auth-z-base: 1;
+  --auth-z-dropdown: 10;
+  --auth-z-modal: 100;
+  --auth-z-tooltip: 1000;
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --auth-text-primary: #f9fafb;
+    --auth-text-secondary: #d1d5db;
+    --auth-bg-primary: #1f2937;
+    --auth-bg-secondary: #111827;
+    --auth-border-color: #374151;
+  }
+}

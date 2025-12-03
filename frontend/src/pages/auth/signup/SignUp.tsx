@@ -8,7 +8,7 @@ export default function SignUp(): ReactElement {
     <AuthLayout>
       <div className="form-wrapper">
         <div className="form-header">
-          <h2>Get started absolutely free</h2>
+          <h1>Get started absolutely free</h1>
           <p>
             Already have an account?{" "}
             <Link to="/auth/sign-in" className="auth-link">
