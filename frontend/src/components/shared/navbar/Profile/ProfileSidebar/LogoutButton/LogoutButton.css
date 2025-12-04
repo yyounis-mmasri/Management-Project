@@ -13,6 +13,7 @@
   font-weight: 700;
   position: relative;
   overflow: hidden;
+  padding: 0.5rem 8rem;
 }
 
 .logout-button:hover {
