@@ -1,5 +1,4 @@
 import type { KeyboardEvent } from "react";
-import type { BoardColumn } from "../types/BoardColumn";
 import submitColumn from "./submitColumn";
 
 const handleColumnAdderKeyDown = (

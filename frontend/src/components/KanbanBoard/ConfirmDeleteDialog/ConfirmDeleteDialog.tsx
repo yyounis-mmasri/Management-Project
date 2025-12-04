@@ -14,7 +14,6 @@ interface ConfirmDeleteDialogProps {
 
 const ConfirmDeleteDialog = ({
   selectedCard,
-  selectedBag,
   onClose,
   setShowConfirmDelete,
   show,
