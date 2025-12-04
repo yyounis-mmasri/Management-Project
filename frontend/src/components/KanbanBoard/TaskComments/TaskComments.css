@@ -2,13 +2,23 @@
   overflow: hidden;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .task-comments-list {
   display: flex;
   flex-direction: column;
-  max-height: calc(100% - var(--comment-bar-height));
   overflow-y: auto;
-  padding: 1.5rem 0;
+  padding: var(--spacing-2xl) 0;
   flex: 1 1 auto;
+}
+
+.no-comments {
+  color: #6b7280;
+  font-size: var(--font-size-lg);
+  text-align: center;
+  margin-top: var(--spacing-xl);
+  flex: 1;
 }

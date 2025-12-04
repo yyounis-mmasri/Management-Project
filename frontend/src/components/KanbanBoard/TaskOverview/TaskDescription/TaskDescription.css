@@ -1,15 +1,15 @@
 .task-description-textarea {
-  font-size: 0.7rem;
-  font-weight: 400;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-regular);
   width: 100%;
   outline: none;
   background-color: transparent;
-  padding: 0.5rem;
+  padding: var(--spacing-md);
   margin: 0;
   resize: none;
   border: 2px solid var(--kanban-border-light);
-  border-radius: 0.5rem;
-  transition: border 0.2s ease;
+  border-radius: var(--radius-md);
+  transition: border var(--transition-fast);
   font-family: inherit;
   min-height: 10rem;
   overflow: hidden;

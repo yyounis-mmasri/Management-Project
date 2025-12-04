@@ -1,14 +1,14 @@
 .task-comment-item {
   display: flex;
-  gap: 1rem;
+  gap: var(--spacing-xl);
   padding: 0;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-xl);
   align-items: flex-start;
 }
 
 .comment-icon {
-  width: 2rem;
-  height: 2rem;
+  width: var(--icon-lg);
+  height: var(--icon-lg);
   object-fit: cover;
   flex: 0 0 auto;
 }
@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 0.25rem;
+  gap: var(--spacing-xs);
 }
 
 .comment-details div {
@@ -32,18 +32,18 @@
 }
 
 .comment-details h3 {
-  font-size: 0.75rem;
-  font-weight: 400;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-regular);
   color: var(--kanban-text-primary);
 }
 
 .comment-details span {
-  font-size: 0.65rem;
+  font-size: var(--font-size-xs);
   color: var(--kanban-text-secondary);
 }
 
 .comment-details p {
-  font-size: 0.75rem;
+  font-size: var(--font-size-md);
   color: var(--kanban-text-secondary);
   white-space: pre-wrap;
 }
@@ -51,14 +51,18 @@
 .comment-content {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--spacing-md);
 }
 
 .comment-content img {
-  max-width: 100%;
-  border-radius: 0.5rem;
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  border-radius: var(--radius-md);
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  transition: opacity var(--transition-fast);
+  object-fit: contain;
 }
 .comment-content img:hover {
   opacity: 0.8;

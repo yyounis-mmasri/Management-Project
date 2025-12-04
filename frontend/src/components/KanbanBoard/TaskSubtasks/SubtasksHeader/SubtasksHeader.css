@@ -1,0 +1,33 @@
+.task-subtasks-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.task-subtasks-count {
+  font-size: var(--font-size-sm);
+  color: black;
+}
+
+.task-subtasks-progress {
+  height: 4px;
+  background: #e6e7ea;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.task-subtasks-progress-bar {
+  height: 100%;
+  background: black;
+  border-radius: 6px 0 0 6px;
+  transition: width 180ms ease;
+}
+
+@media (max-width: 520px) {
+  .task-subtasks-count {
+    font-size: var(--font-size-lg);
+  }
+}

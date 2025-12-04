@@ -2,13 +2,11 @@ import { useState } from "react";
 import "./KanbanTaskbar.css";
 import KanbanCardStatus from "../KanbanCardStatus/KanbanCardStatus";
 import KanbanCardActions from "../KanbanCardActions/KanbanCardActions";
-import KanbanCardTabs from "../KanbanCardTabs/KanbanCardTabs.tsx";
+import KanbanCardTabs from "./KanbanCardTabs/KanbanCardTabs.tsx";
 import type { BoardCard } from "../../../types/BoardCard";
 import type { ColumnHeaderBag } from "../../../types/ColumnHeaderBag";
 import type { TabType } from "../../../types/TabType";
-import TaskOverview from "../TaskOverview/TaskOverview.tsx";
-import TaskSubtasks from "../TaskSubtasks/TaskSubtasks.tsx";
-import TaskComments from "../TaskComments/TaskComments.tsx";
+import { TabComponents } from "./TabComponents.tsx";
 
 interface KanbanTaskbarProps {
   show: boolean;
@@ -25,11 +23,10 @@ const KanbanTaskbar = ({
 }: KanbanTaskbarProps) => {
   const [activeTab, setActiveTab] = useState<TabType>("overview");
 
-  const TabComponents: Record<TabType, React.ReactNode> = {
-    comments: <TaskComments selectedCard={selectedCard} />,
-    subtasks: <TaskSubtasks selectedCard={selectedCard} />,
-    overview: <TaskOverview selectedCard={selectedCard} />,
-  };
+  const tabComponents = TabComponents({ selectedCard });
+
+  const isCommentsTab = activeTab === "comments";
+
   return (
     <div
       className={`kanban-taskbar-backdrop ${show ? "open" : ""}`}
@@ -53,7 +50,13 @@ const KanbanTaskbar = ({
             activeTab={activeTab}
             setActiveTab={setActiveTab}
           />
-          <div className="kanban-taskbar-body">{TabComponents[activeTab]}</div>
+          <div
+            className={`kanban-taskbar-body ${
+              isCommentsTab ? "with-input-bar" : ""
+            }`}
+          >
+            {tabComponents[activeTab]}
+          </div>
         </div>
       </div>
     </div>

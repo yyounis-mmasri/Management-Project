@@ -3,23 +3,28 @@
 }
 
 .card-title-input {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: var(--font-size-4xl);
+  line-height: 1.5rem;
+  font-weight: var(--font-medium);
   width: 100%;
   outline: none;
   background-color: transparent;
-  padding: 0.2rem 0.4rem;
-  margin: 0;
+  margin: var(--spacing-2xl) 0 var(--spacing-lg);
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   border: 2px solid transparent;
-  border-radius: 0.5rem;
-  transition: border 0.2s ease, background-color 0.2s ease;
+  border-radius: var(--radius-md);
+  transition: border var(--transition-fast),
+    background-color var(--transition-fast), padding var(--transition-fast);
+  cursor: pointer;
 }
 
 .card-title-input.focused {
-  border: 2px solid var(--kanban-border-medium);
+  padding: 0.2rem 0.4rem;
+  border: 2px solid var(--kanban-text-primary);
   background-color: var(--kanban-card-bg);
-  transition: border 0.2s ease, background-color 0.2s ease;
+  transition: border var(--transition-fast),
+    background-color var(--transition-fast), padding var(--transition-fast);
+  cursor: text;
 }

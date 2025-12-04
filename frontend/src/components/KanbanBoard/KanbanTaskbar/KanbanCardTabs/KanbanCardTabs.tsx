@@ -1,7 +1,7 @@
 import kanbanCardTabs from "./kanbanCardTabs";
 import "./KanbanCardTabs.css";
-import type { BoardCard } from "../../../types/BoardCard";
-import type { TabType } from "../../../types/TabType";
+import type { BoardCard } from "../../../../types/BoardCard";
+import type { TabType } from "../../../../types/TabType";
 
 interface KanbanCardTabsProps {
   selectedCard: BoardCard;
@@ -24,8 +24,9 @@ const KanbanCardTabs = ({
           }`}
           onClick={() => setActiveTab(tab.id as TabType)}
         >
-          {tab.label}{" "}
-          {tab.id === "comments" && `(${selectedCard.comments?.length})`}
+          {tab.label}
+          {/* If tab is "comments", show the number of comments next to the label */}
+          {tab.id === "comments" && ` (${selectedCard.comments?.length})`}
         </button>
       ))}
     </div>

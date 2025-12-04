@@ -1,22 +1,22 @@
 .task-assignees-container {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--spacing-md);
 }
 
 .add-assignee-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: var(--font-size-7xl);
   color: #7c7c7c;
-  font-weight: 600;
+  font-weight: var(--font-semi-bold);
   background-color: #d3d3d3;
   border: 1px dashed #a9a9a9;
   opacity: 0.7;
   cursor: pointer;
   border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--icon-xl);
+  height: var(--icon-xl);
 }
 
 .add-assignee-container:hover {

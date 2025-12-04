@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
-  padding: 0.8rem 0.5rem;
+  padding: var(--spacing-md) var(--spacing-sm);
   border-bottom: 1px solid var(--kanban-bg-hover-dark);
   background-color: var(--kanban-tab-bg);
 }
@@ -10,19 +10,20 @@
 .kanban-taskbar-tab {
   flex: 1;
   text-align: center;
-  padding: 0.5rem 0;
+  padding: var(--spacing-md) 0;
   cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-medium);
   color: var(--kanban-text-secondary);
-  transition: color 0.2s ease, border-bottom 0.2s ease;
+  transition: color var(--transition-fast), border-bottom var(--transition-fast);
   background-color: transparent;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-md);
 }
 .kanban-taskbar-tab.active {
   background-color: white;
   color: black;
-  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition: background-color var(--transition-fast),
+    color var(--transition-fast), transform var(--transition-fast);
   box-shadow: 0 2px 6px var(--kanban-tab-active-shadow);
 }

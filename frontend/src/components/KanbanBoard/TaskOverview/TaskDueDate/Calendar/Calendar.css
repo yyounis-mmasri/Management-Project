@@ -8,57 +8,57 @@
   z-index: 10000;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0.2s ease, opacity 0.2s ease;
+  transition: visibility var(--transition-fast), opacity var(--transition-fast);
 }
 
 .calendar-backdrop.open {
   visibility: visible;
   opacity: 1;
-  transition: visibility 0.2s ease, opacity 0.2s ease;
+  transition: visibility var(--transition-fast), opacity var(--transition-fast);
 }
 
 .calendar-container {
   background-color: var(--kanban-dialog-bg);
-  border-radius: 1rem;
+  border-radius: var(--spacing-xl);
   box-shadow: 0 4px 8px var(--kanban-dialog-shadow);
-  padding: 1.5rem;
+  padding: var(--spacing-2xl);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--spacing-3xl);
   max-width: 90vw;
 }
 
 .calendars {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: var(--spacing-xl);
 }
 
 .react-datepicker {
   border: 1px solid var(--kanban-border-light);
-  border-radius: 0.5rem;
+  border-radius: var(--radius-md);
   font-family: inherit;
 }
 
 .react-datepicker__header {
   background-color: var(--kanban-column-bg);
   border-bottom: 1px solid var(--kanban-border-light);
-  border-radius: 0.5rem 0.5rem 0 0;
-  padding: 0.5rem;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  padding: var(--spacing-md);
 }
 
 .react-datepicker__current-month {
   color: var(--kanban-text-primary);
-  font-weight: 600;
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
+  font-weight: var(--font-semi-bold);
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-md);
 }
 
 .react-datepicker__day-name,
 .react-datepicker__day {
   color: var(--kanban-text-primary);
-  width: 2rem;
-  line-height: 2rem;
+  width: var(--icon-lg);
+  line-height: var(--icon-lg);
   margin: 0.2rem;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .react-datepicker__navigation {
-  top: 0.5rem;
+  top: var(--spacing-md);
 }
 
 .react-datepicker__navigation-icon::before {
@@ -90,17 +90,17 @@
 .calendar-action-buttons {
   display: flex;
   justify-content: flex-end;
-  gap: 0.5rem;
+  gap: var(--spacing-md);
 }
 
 .calendar-cancel-button {
   background-color: var(--kanban-border-light);
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-md);
   cursor: pointer;
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-medium);
 }
 
 .calendar-cancel-button:hover {
@@ -109,11 +109,11 @@
 
 .calendar-apply-button {
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-md);
   cursor: pointer;
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-medium);
   color: white;
   background-color: var(--kanban-apply-button-bg);
 }

@@ -1,10 +1,5 @@
 import subtasksJson from "../../mocks/subtasks.json";
-
-export type Subtask = {
-  id: number;
-  text: string;
-  checked: boolean;
-};
+import type { Subtask } from "../../types/Subtask";
 
 /**
  * Loads initial subtasks for a card.
