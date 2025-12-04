@@ -3,7 +3,7 @@ import type { ColumnHeaderBag } from "../types/ColumnHeaderBag";
 import handleCardRemove from "./handleCardRemove";
 
 interface CreateWrappedBagParams {
-  bag: ColumnHeaderBag<BoardCard>;
+  bag: Omit<ColumnHeaderBag<BoardCard>, "removeCard">;
   columnId: number;
   persistRename: (columnId: number, newTitle: string) => void;
 }
