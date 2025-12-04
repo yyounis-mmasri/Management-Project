@@ -107,3 +107,25 @@
   background-color: transparent;
   justify-content: start;
 }
+
+@media (max-width: 1024px) {
+  .workspace-selector .workspace-name {
+    font-size: 0.8rem;
+  }
+
+  .workspace-selector .workspace-access {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .workspace-selector .workspace-name,
+  .workspace-selector .workspace-access {
+    display: none;
+  }
+
+  .workspace-selector .workspace-arrow {
+    display: none;
+  }
+}

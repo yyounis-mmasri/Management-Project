@@ -37,3 +37,21 @@
   opacity: 1;
   transform: scale(0.95);
 }
+
+@media (max-width: 1024px) {
+  .profile__switch__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile__switch {
+    gap: 0.4rem;
+  }
+
+  .profile__switch__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}

@@ -14,7 +14,7 @@ export const Layout = ({ children }: LayoutProps) => {
     <div className="layout">
       <Sidebar isCollapsed={isCollapsed} toggle={toggle} />
       <div className={`layout-main ${isCollapsed ? "expanded" : ""}`}>
-        <Navbar />
+        <Navbar isCollapsed={isCollapsed} toggle={toggle} />
         <main className="layout-content">{children}</main>
       </div>
     </div>

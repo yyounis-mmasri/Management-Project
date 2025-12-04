@@ -36,3 +36,36 @@
   color: var(--font-red-color);
   background-color: var(--bg-red-color);
 }
+
+@media (max-width: 1024px) {
+  .profile-nav {
+    padding: 0.4rem;
+  }
+
+  .profile-nav__icon {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .profile-nav__label {
+    font-size: 0.8rem;
+    margin-left: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-nav__icon {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  .profile-nav__label {
+    font-size: 0.75rem;
+    margin-left: 0.75rem;
+  }
+
+  .profile-nav__count {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.5rem;
+  }
+}

@@ -91,3 +91,45 @@
 .sidebar.collapsed .sidebar-link span {
   display: none;
 }
+
+.sidebar-backdrop {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1299;
+    backdrop-filter: blur(2px);
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1300;
+    transition: transform var(--transition-normal);
+  }
+
+  .sidebar.collapsed {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 70vw;
+    padding: 15px;
+  }
+
+  .overview-header {
+    font-size: 0.625rem;
+  }
+}

@@ -34,3 +34,15 @@
   left: calc(var(--sidebar-collapsed-width) - 1rem);
   transition: left var(--transition-normal);
 }
+
+@media (max-width: 1024px) {
+  .sidebar .sidebar__toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar .sidebar__toggle {
+    display: none;
+  }
+}

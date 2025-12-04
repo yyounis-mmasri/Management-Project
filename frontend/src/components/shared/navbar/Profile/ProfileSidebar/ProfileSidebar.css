@@ -114,3 +114,44 @@
   width: 100%;
   background: var(--profile-logout-gradient);
 }
+
+@media (max-width: 1024px) {
+  .profile-sidebar__container {
+    width: 22rem;
+  }
+
+  .profile__container {
+    padding: 1.25rem 1rem;
+  }
+
+  .profile-sidebar__navs {
+    padding: 1.25rem 1rem;
+  }
+
+  .profile-sidebar__discounts {
+    padding: 1.25rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-sidebar__container {
+    width: 100vw;
+  }
+
+  .profile__container {
+    padding: 1rem 0.75rem;
+    gap: 1.5rem;
+  }
+
+  .profile-sidebar__navs {
+    padding: 1rem 0.75rem;
+  }
+
+  .profile-sidebar__discounts {
+    padding: 1rem 0.75rem;
+  }
+
+  .profile-sidebar__close {
+    margin: 1rem;
+  }
+}

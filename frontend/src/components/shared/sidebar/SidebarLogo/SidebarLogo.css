@@ -16,3 +16,29 @@
   color: var(--layout-text-secondary);
   justify-self: center;
 }
+
+@media (max-width: 1024px) {
+  .logo-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .logo-title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar-logo {
+    margin-bottom: 1rem;
+  }
+
+  .logo-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .logo-title {
+    font-size: 1.1rem;
+  }
+}

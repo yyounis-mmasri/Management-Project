@@ -29,3 +29,27 @@
   align-items: center;
   gap: 1rem;
 }
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .navbar-left,
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 0.75rem;
+  }
+
+  .navbar-left,
+  .navbar-right {
+    gap: 0.25rem;
+  }
+}

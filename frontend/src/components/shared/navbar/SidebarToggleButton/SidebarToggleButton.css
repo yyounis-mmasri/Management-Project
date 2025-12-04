@@ -1,0 +1,29 @@
+.sidebar-toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: none;
+}
+
+.sidebar-toggle-button img {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .sidebar-toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: block;
+  }
+
+  .sidebar-toggle-button img {
+    height: 100%;
+    width: 100%;
+  }
+}

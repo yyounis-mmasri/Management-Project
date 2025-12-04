@@ -35,3 +35,28 @@
 .sidebar.collapsed .sidebar-link span {
   display: none;
 }
+
+@media (max-width: 1024px) {
+  .sidebar-link {
+    padding: 0.2rem 0.4rem 0.2rem 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .sidebar-link img {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar-link {
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    font-size: 0.85rem;
+    line-height: 1.75rem;
+  }
+
+  .sidebar-link img {
+    width: 0.85rem;
+    height: 0.85rem;
+  }
+}

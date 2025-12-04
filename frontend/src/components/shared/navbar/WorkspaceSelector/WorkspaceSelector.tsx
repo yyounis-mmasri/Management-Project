@@ -29,6 +29,7 @@ const WorkspaceSelector = () => {
         <img src={assets.updownArrow} alt="⇕" className="workspace-arrow" />
       </div>
 
+      {/* Workspace Selector dropdown */}
       {isOpen && (
         <>
           <div

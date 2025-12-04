@@ -18,3 +18,17 @@
   height: 80%;
   border-radius: 50%;
 }
+
+@media (max-width: 1024px) {
+  .profile {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile {
+    width: 2rem;
+    height: 2rem;
+  }
+}

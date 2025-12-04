@@ -14,11 +14,10 @@ const SidebarToggle = ({ isCollapsed, toggle }: SidebarToggleProps) => {
       aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
       aria-pressed={isCollapsed}
     >
-      {isCollapsed ? (
-        <img src={assets.rightArrow} alt=">" />
-      ) : (
-        <img src={assets.leftArrow} alt="<" />
-      )}
+      <img
+        src={isCollapsed ? assets.rightArrow : assets.leftArrow}
+        alt={isCollapsed ? ">" : "<"}
+      />
     </button>
   );
 };

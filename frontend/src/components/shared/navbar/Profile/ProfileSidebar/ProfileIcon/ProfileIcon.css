@@ -26,3 +26,33 @@
   color: var(--layout-text-email);
   font-weight: 400;
 }
+
+@media (max-width: 1024px) {
+  .profile__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .profile__name {
+    font-size: 0.95rem;
+  }
+
+  .profile__email {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .profile__name {
+    font-size: 0.9rem;
+  }
+
+  .profile__email {
+    font-size: 0.75rem;
+  }
+}

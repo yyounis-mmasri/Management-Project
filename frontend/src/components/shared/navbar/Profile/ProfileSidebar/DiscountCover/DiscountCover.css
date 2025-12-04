@@ -55,9 +55,49 @@
 
 @keyframes animateRocket {
   0% {
-    transform: translateY(10px); /* starting position */
+    transform: translateY(10px);
   }
   100% {
-    transform: translateY(30px); /* moves 20px up */
+    transform: translateY(30px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .profile-sidebar__discounts__text h3 {
+    font-size: 0.85rem;
+  }
+
+  .profile-sidebar__discounts__text p {
+    font-size: 0.7rem;
+  }
+
+  .profile-sidebar__discounts__img {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-sidebar__discounts__text {
+    padding: 0.75rem;
+  }
+
+  .profile-sidebar__discounts__text h3 {
+    font-size: 0.8rem;
+  }
+
+  .profile-sidebar__discounts__text p {
+    font-size: 0.65rem;
+    margin: 0.2rem 0 0.75rem;
+  }
+
+  .profile-sidebar__discounts__text button {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.65rem;
+  }
+
+  .profile-sidebar__discounts__img {
+    width: 4rem;
+    height: 4rem;
   }
 }

@@ -31,11 +31,13 @@ const ProfileSidebar = ({ show, onClose }: ProfileSidebarProps) => {
             <img src={assets.cancel} alt="Close" />
           </button>
 
+          {/* Profile information */}
           <div className="profile__container">
             <ProfileIcon user={user} />
             <ProfileSwitch />
           </div>
 
+          {/* Navigation items */}
           <div className="profile-sidebar__navs">
             {navItems.map((item) => (
               <ProfileNav
