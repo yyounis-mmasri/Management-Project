@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../context/AuthContext';
 import AuthLayout from '../../../components/AuthLayout/AuthLayout';
+import { AuthLink } from '../../../components/shared';
 import { 
-  validateCredentials, 
   AUTH_CONSTANTS,
-  createPasswordToggleHandler 
+  createPasswordToggleHandler,
+  createSignInHandler
 } from '../../../utils/auth';
 import './SignIn.css';
 import FormSignIn from './FormSignIn';
@@ -19,18 +20,7 @@ const SignIn: React.FC = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setError('');
-
-    if (validateCredentials(email, password)) {
-      login();
-      navigate('/kanban', { replace: true });
-    } else {
-      setError(AUTH_CONSTANTS.MESSAGES.INVALID_CREDENTIALS);
-    }
-  };
-
+  const handleSubmit = createSignInHandler(login, navigate, setError);
   const togglePassword = createPasswordToggleHandler(setShowPassword);
 
   return (
@@ -39,9 +29,9 @@ const SignIn: React.FC = () => {
         <h1 className="signin-title">Sign in to your account</h1>
         <p className="signin-subtitle">
           Don't have an account?{' '}
-          <Link to="/auth/sign-up" className="signup-link"> 
+          <AuthLink to="/auth/sign-up"> 
             Get started
-          </Link>
+          </AuthLink>
         </p>
 
         <div className="demo-info">
@@ -59,7 +49,7 @@ const SignIn: React.FC = () => {
           onEmailChange={setEmail}
           onPasswordChange={setPassword}
           onToggleShow={togglePassword}
-          onSubmit={handleSubmit}
+          onSubmit={(e) => handleSubmit(e, email, password)}
         />
       </div>
     </AuthLayout>

@@ -1,6 +1,6 @@
 import { type ReactElement } from "react";
-import { Link } from "react-router-dom";
 import AuthLayout from "../../../components/AuthLayout/AuthLayout";
+import { AuthLink } from "../../../components/shared";
 import SignUpForm from "./SignUpForm";
 
 export default function SignUp(): ReactElement {
@@ -11,9 +11,9 @@ export default function SignUp(): ReactElement {
           <h1>Get started absolutely free</h1>
           <p>
             Already have an account?{" "}
-            <Link to="/auth/sign-in" className="auth-link">
+            <AuthLink to="/auth/sign-in">
               Sign in
-            </Link>
+            </AuthLink>
           </p>
         </div>
 

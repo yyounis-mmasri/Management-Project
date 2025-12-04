@@ -24,3 +24,15 @@ export {
   createFieldSetter,
 } from './handleFormFieldChange';
 export { AUTH_CONSTANTS, PASSWORD_REQUIREMENTS } from './constants';
+
+// Form validation
+export { 
+  validateSignUpForm, 
+  validateSignInForm, 
+  validateResetPasswordForm 
+} from './validateFormData';
+
+// Form submission handlers
+export { createSignInHandler } from './createSignInHandler';
+export { createSignUpHandler } from './createSignUpHandler';
+export { createResetPasswordHandler } from './createResetPasswordHandler';

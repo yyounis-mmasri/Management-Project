@@ -153,18 +153,65 @@
   }
 }
 
-@media (max-width: 600px) {
+/* ========== Tablet Responsive ========== */
+@media (max-width: 1023px) and (min-width: 768px) {
   .auth-container {
     flex-direction: column;
+    height: auto;
+    min-height: 100vh;
   }
 
   .auth-left {
-    padding: var(--auth-space-3xl) var(--auth-space-xl);
-    margin-bottom: var(--auth-form-gap);
+    flex: none;
+    padding: var(--auth-space-3xl) var(--auth-space-2xl);
+    min-height: auto;
   }
 
   .auth-right {
-    padding: var(--auth-space-3xl) var(--auth-space-xl);
+    flex: none;
+    padding: var(--auth-space-2xl);
+    overflow-y: visible;
+  }
+
+  .auth-header {
+    margin-bottom: var(--auth-space-3xl);
+  }
+
+  .illustration-container {
+    max-width: 300px;
+  }
+
+  .features {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--auth-space-xl);
+  }
+}
+
+/* ========== Mobile Responsive ========== */
+@media (max-width: 767px) {
+  .auth-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .auth-left {
+    flex: none;
+    padding: var(--auth-space-2xl) var(--auth-space-lg);
+    min-height: auto;
+  }
+
+  .auth-right {
+    flex: none;
+    padding: var(--auth-space-2xl) var(--auth-space-lg);
+    overflow-y: visible;
+  }
+
+  .auth-header {
+    margin-bottom: var(--auth-space-2xl);
+    max-width: 100%;
   }
 
   .auth-header h1 {
@@ -172,14 +219,46 @@
   }
 
   .illustration-container {
-    max-width: 260px;
+    max-width: 280px;
   }
 
   .features {
+    flex-direction: column;
     gap: var(--auth-space-md);
   }
 
   .feature-icon {
     font-size: var(--auth-font-lg);
+  }
+  
+  .feature-text h3 {
+    font-size: var(--auth-font-base);
+  }
+  
+  .feature-text p {
+    font-size: var(--auth-font-sm);
+  }
+}
+
+/* ========== Small Mobile Responsive ========== */
+@media (max-width: 479px) {
+  .auth-left {
+    padding: var(--auth-space-xl) var(--auth-space-md);
+  }
+
+  .auth-right {
+    padding: var(--auth-space-xl) var(--auth-space-md);
+  }
+
+  .auth-header h1 {
+    font-size: var(--auth-font-xl);
+  }
+
+  .illustration-container {
+    max-width: 240px;
+  }
+
+  .features {
+    gap: var(--auth-space-sm);
   }
 }

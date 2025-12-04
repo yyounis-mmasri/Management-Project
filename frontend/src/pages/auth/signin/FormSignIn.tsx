@@ -1,6 +1,6 @@
 import { type FC } from 'react';
-import { Link } from 'react-router-dom';
 import type { SignInFormProps } from '../../../types/auth';
+import { AuthInput, AuthButton, AuthMessage, AuthLink } from '../../../components/shared';
 import './SignIn.css';
 
 const FormSignIn: FC<SignInFormProps> = ({
@@ -16,26 +16,23 @@ const FormSignIn: FC<SignInFormProps> = ({
   return (
     <form className="signin-form" onSubmit={onSubmit}>
       {/* Email Input */}
-      <div className="form-group">
-        <label className="form-label" htmlFor="email">Email address</label>
-        <input
-          type="email"
-          id="email"
-          className="form-input"
-          value={email}
-          onChange={(e) => onEmailChange(e.target.value)}
-          placeholder="example@gmail.com"
-          required
-        />
-      </div>
+      <AuthInput
+        type="email"
+        id="email"
+        label="Email address"
+        value={email}
+        onChange={(e) => onEmailChange(e.target.value)}
+        placeholder="example@gmail.com"
+        required
+      />
 
       {/* Password Input */}
-      <div className="form-group">
+      <div className="password-field-wrapper">
         <div className="password-header">
-          <label className="form-label" htmlFor="password">Password</label>
-          <Link to="/auth/reset-password" className="forgot-link">
+          <span className="password-label">Password</span>
+          <AuthLink to="/auth/reset-password" variant="secondary">
             Forgot password?
-          </Link>
+          </AuthLink>
         </div>
         <div className="password-input-wrapper">
           <input
@@ -59,12 +56,10 @@ const FormSignIn: FC<SignInFormProps> = ({
       </div>
 
       {/* Error message */}
-      {error && <div className="error-message">{error}</div>}
+      {error && <AuthMessage type="error">{error}</AuthMessage>}
 
       {/* Submit Button */}
-      <button type="submit" className="submit-button">
-        Sign in
-      </button>
+      <AuthButton type="submit">Sign in</AuthButton>
     </form>
   );
 };
