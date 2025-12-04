@@ -1,5 +1,6 @@
 import "./DiscountCover.css";
 import { assets } from "../../../../../../assets/assets";
+import Ripple from "../../../../Ripple/Ripple";
 
 const DiscountCover = () => {
   return (
@@ -8,7 +9,9 @@ const DiscountCover = () => {
         <div className="profile-sidebar__discounts__text">
           <h3>30% OFF</h3>
           <p>Power up Productivity!</p>
-          <button>Upgrade to Pro</button>
+          <Ripple>
+            <button>Upgrade to Pro</button>
+          </Ripple>
         </div>
         <img
           src={assets.rocket}

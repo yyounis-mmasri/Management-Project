@@ -2,6 +2,7 @@ import "./ProfileSwitch.css";
 import Tooltip from "../../../../../../utils/Tooltip/Tooltip";
 import users from "../../../../../../mocks/users.json";
 import { currentUser } from "../../../../../../utils/currentUser";
+import Ripple from "../../../../Ripple/Ripple";
 
 const ProfileSwitch = () => {
   return (
@@ -21,9 +22,11 @@ const ProfileSwitch = () => {
           )
       )}
       <Tooltip text="Add account">
-        <div className="profile__switch__icon profile__switch__icon--new">
-          +
-        </div>
+        <Ripple>
+          <div className="profile__switch__icon profile__switch__icon--new">
+            +
+          </div>
+        </Ripple>
       </Tooltip>
     </div>
   );

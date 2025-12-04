@@ -1,6 +1,7 @@
 import "./WorkspaceItem.css";
 import handleWorkspaceSelect from "../../../../../utils/handleWorkspaceSelect";
 import type { Workspace } from "../../../../../types/Workspace";
+import Ripple from "../../../Ripple/Ripple";
 
 interface WorkspaceItemProps {
   workspace: Workspace;
@@ -14,25 +15,31 @@ const WorkspaceItem = ({
   setIsOpen,
 }: WorkspaceItemProps) => {
   return (
-    <div
-      key={workspace.id}
-      className="workspace-option"
-      onClick={handleWorkspaceSelect(workspace, setCurrentWorkspace, setIsOpen)}
-    >
-      <img
-        src={workspace.logo}
-        alt={workspace.alt}
-        className="workspace-logo"
-      />
-      <h2 className="workspace-name">{workspace.name}</h2>
-      <span
-        className={`workspace-access ${
-          workspace.access === "Pro" ? "pro" : ""
-        }`}
+    <Ripple>
+      <div
+        key={workspace.id}
+        className="workspace-option"
+        onClick={handleWorkspaceSelect(
+          workspace,
+          setCurrentWorkspace,
+          setIsOpen
+        )}
       >
-        {workspace.access}
-      </span>
-    </div>
+        <img
+          src={workspace.logo}
+          alt={workspace.alt}
+          className="workspace-logo"
+        />
+        <h2 className="workspace-name">{workspace.name}</h2>
+        <span
+          className={`workspace-access ${
+            workspace.access === "Pro" ? "pro" : ""
+          }`}
+        >
+          {workspace.access}
+        </span>
+      </div>
+    </Ripple>
   );
 };
 

@@ -4,6 +4,7 @@ import workspacesData from "../../../../mocks/workspaces.json";
 import { assets } from "../../../../assets/assets";
 import WorkspaceItem from "./WorkspaceItem/WorkspaceItem";
 import type { Workspace } from "../../../../types/Workspace";
+import Ripple from "../../Ripple/Ripple";
 
 const workspaces = workspacesData as Workspace[];
 
@@ -12,22 +13,24 @@ const WorkspaceSelector = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="workspace-selector-wrapper">
-      <div className="workspace-selector" onClick={() => setIsOpen(!isOpen)}>
-        <img
-          src={currentWorkspace.logo}
-          alt={currentWorkspace.alt}
-          className="workspace-logo"
-        />
-        <h2 className="workspace-name">{currentWorkspace.name}</h2>
-        <span
-          className={`workspace-access ${
-            currentWorkspace.access === "Pro" ? "pro" : ""
-          }`}
-        >
-          {currentWorkspace.access}
-        </span>
-        <img src={assets.updownArrow} alt="⇕" className="workspace-arrow" />
-      </div>
+      <Ripple>
+        <div className="workspace-selector" onClick={() => setIsOpen(!isOpen)}>
+          <img
+            src={currentWorkspace.logo}
+            alt={currentWorkspace.alt}
+            className="workspace-logo"
+          />
+          <h2 className="workspace-name">{currentWorkspace.name}</h2>
+          <span
+            className={`workspace-access ${
+              currentWorkspace.access === "Pro" ? "pro" : ""
+            }`}
+          >
+            {currentWorkspace.access}
+          </span>
+          <img src={assets.updownArrow} alt="⇕" className="workspace-arrow" />
+        </div>
+      </Ripple>
 
       {/* Workspace Selector dropdown */}
       {isOpen && (
@@ -46,14 +49,16 @@ const WorkspaceSelector = () => {
               />
             ))}
             <div className="divider" />
-            <div className="workspace-create">
-              <img
-                src={assets.plusSign}
-                alt="+"
-                className="workspace-plus-sign"
-              />
-              <p className="workspace-create-text">Create Workspace</p>
-            </div>
+            <Ripple>
+              <div className="workspace-create">
+                <img
+                  src={assets.plusSign}
+                  alt="+"
+                  className="workspace-plus-sign"
+                />
+                <p className="workspace-create-text">Create Workspace</p>
+              </div>
+            </Ripple>
           </div>
         </>
       )}
