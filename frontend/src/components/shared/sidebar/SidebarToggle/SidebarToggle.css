@@ -3,7 +3,7 @@
   height: 26px;
   background-color: var(--layout-bg-white);
   border: 1px solid var(--layout-border-medium);
-  font-size: 2rem;
+  font-size: var(--font-size-8xl);
   cursor: pointer;
   align-items: center;
   justify-content: center;

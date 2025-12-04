@@ -19,17 +19,17 @@
 }
 
 .workspace-selector .workspace-name {
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-semi-bold);
 }
 
 .workspace-selector .workspace-access {
-  font-size: 0.75rem;
+  font-size: var(--font-size-md);
   color: var(--layout-text-workspace);
   background-color: var(--layout-bg-gray);
   padding: 0.125rem 0.5rem;
   border-radius: var(--radius-sm);
-  font-weight: 500;
+  font-weight: var(--font-medium);
 }
 
 .workspace-selector .workspace-arrow {
@@ -100,8 +100,8 @@
 
 .workspace-create-text {
   width: fit-content;
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-medium);
   color: var(--layout-text-primary);
   border: none;
   background-color: transparent;
@@ -110,11 +110,11 @@
 
 @media (max-width: 1024px) {
   .workspace-selector .workspace-name {
-    font-size: 0.8rem;
+    font-size: var(--font-size-regular);
   }
 
   .workspace-selector .workspace-access {
-    font-size: 0.7rem;
+    font-size: var(--font-size-base);
     padding: 0.1rem 0.4rem;
   }
 }

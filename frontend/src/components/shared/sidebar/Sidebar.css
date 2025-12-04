@@ -30,9 +30,9 @@
 .overview-header {
   display: flex;
   align-items: center;
-  font-size: 0.6875rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
-  font-weight: 700;
+  font-weight: var(--font-bold);
   color: var(--layout-text-tertiary);
   cursor: pointer;
   margin-bottom: 10px;
@@ -130,6 +130,6 @@
   }
 
   .overview-header {
-    font-size: 0.625rem;
+    font-size: var(--font-size-2xs);
   }
 }

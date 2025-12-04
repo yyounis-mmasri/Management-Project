@@ -23,7 +23,7 @@
 
 .search-bar span {
   color: black;
-  font-size: 0.75rem;
+  font-size: var(--font-size-md);
   background-color: var(--layout-bg-white);
   padding: 0.4rem;
   border-radius: 6px;
@@ -42,7 +42,7 @@
   }
 
   .search-bar span {
-    font-size: 0.7rem;
+    font-size: var(--font-size-base);
     padding: 0.3rem;
   }
 }

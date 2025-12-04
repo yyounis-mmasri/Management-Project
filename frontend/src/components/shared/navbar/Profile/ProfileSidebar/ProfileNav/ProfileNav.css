@@ -20,8 +20,8 @@
 }
 
 .profile-nav__label {
-  font-size: 0.875rem;
-  font-weight: 400;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-regular);
   margin-left: 1rem;
   color: var(--layout-text-secondary);
 }
@@ -29,8 +29,8 @@
 .profile-nav__count {
   background-color: var(--layout-bg-gray-hover);
   border-radius: var(--radius-md);
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-semi-bold);
   padding: 0.4rem 0.6rem;
   margin-left: 0.5rem;
   color: var(--font-red-color);
@@ -48,7 +48,7 @@
   }
 
   .profile-nav__label {
-    font-size: 0.8rem;
+    font-size: var(--font-size-regular);
     margin-left: 0.8rem;
   }
 }
@@ -60,12 +60,12 @@
   }
 
   .profile-nav__label {
-    font-size: 0.75rem;
+    font-size: var(--font-size-md);
     margin-left: 0.75rem;
   }
 
   .profile-nav__count {
-    font-size: 0.65rem;
+    font-size: var(--font-size-xs);
     padding: 0.3rem 0.5rem;
   }
 }

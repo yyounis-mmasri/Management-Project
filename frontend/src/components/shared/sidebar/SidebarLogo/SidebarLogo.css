@@ -12,7 +12,7 @@
 }
 
 .logo-title {
-  font-size: 1.5rem;
+  font-size: var(--font-size-7xl);
   color: var(--layout-text-secondary);
   justify-self: center;
 }
@@ -24,7 +24,7 @@
   }
 
   .logo-title {
-    font-size: 1.25rem;
+    font-size: var(--font-size-6xl);
   }
 }
 
@@ -39,6 +39,6 @@
   }
 
   .logo-title {
-    font-size: 1.1rem;
+    font-size: var(--font-size-5xl);
   }
 }

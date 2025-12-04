@@ -15,16 +15,16 @@
 }
 
 .profile__name {
-  font-size: 1rem;
+  font-size: var(--font-size-4xl);
   color: var(--layout-text-primary);
-  font-weight: 600;
+  font-weight: var(--font-semi-bold);
 }
 
 .profile__email {
-  font-size: 0.875rem;
+  font-size: var(--font-size-xl);
   word-wrap: break-word;
   color: var(--layout-text-email);
-  font-weight: 400;
+  font-weight: var(--font-regular);
 }
 
 @media (max-width: 1024px) {
@@ -34,11 +34,11 @@
   }
 
   .profile__name {
-    font-size: 0.95rem;
+    font-size: var(--font-size-3xl);
   }
 
   .profile__email {
-    font-size: 0.8rem;
+    font-size: var(--font-size-regular);
   }
 }
 
@@ -49,10 +49,10 @@
   }
 
   .profile__name {
-    font-size: 0.9rem;
+    font-size: var(--font-size-2xl);
   }
 
   .profile__email {
-    font-size: 0.75rem;
+    font-size: var(--font-size-md);
   }
 }

@@ -22,22 +22,22 @@
 }
 
 .profile-sidebar__discounts__text h3 {
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-semi-bold);
   color: white;
 }
 
 .profile-sidebar__discounts__text p {
-  font-size: 0.75rem;
-  font-weight: 400;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-regular);
   margin: 0.25rem 0 1rem;
   color: white;
 }
 
 .profile-sidebar__discounts__text button {
   padding: 0.25rem 0.5rem;
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-semi-bold);
   background-color: var(--layout-accent-orange);
   border: none;
   border-radius: var(--radius-md);
@@ -64,11 +64,11 @@
 
 @media (max-width: 1024px) {
   .profile-sidebar__discounts__text h3 {
-    font-size: 0.85rem;
+    font-size: var(--font-size-lg);
   }
 
   .profile-sidebar__discounts__text p {
-    font-size: 0.7rem;
+    font-size: var(--font-size-base);
   }
 
   .profile-sidebar__discounts__img {
@@ -83,17 +83,17 @@
   }
 
   .profile-sidebar__discounts__text h3 {
-    font-size: 0.8rem;
+    font-size: var(--font-size-regular);
   }
 
   .profile-sidebar__discounts__text p {
-    font-size: 0.65rem;
+    font-size: var(--font-size-xs);
     margin: 0.2rem 0 0.75rem;
   }
 
   .profile-sidebar__discounts__text button {
     padding: 0.2rem 0.4rem;
-    font-size: 0.65rem;
+    font-size: var(--font-size-xs);
   }
 
   .profile-sidebar__discounts__img {

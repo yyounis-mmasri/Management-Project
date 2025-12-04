@@ -9,8 +9,8 @@
   background-color: var(--bg-red-color);
   cursor: pointer;
   border-radius: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-bold);
   position: relative;
   overflow: hidden;
   padding: 0.5rem 8rem;
@@ -22,13 +22,13 @@
 
 @media (max-width: 1024px) {
   .logout-button {
-    font-size: 0.7rem;
+    font-size: var(--font-size-base);
   }
 }
 
 @media (max-width: 600px) {
   .logout-button {
-    font-size: 0.65rem;
+    font-size: var(--font-size-xs);
     gap: 0.4rem;
   }
 }
