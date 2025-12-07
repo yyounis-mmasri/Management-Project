@@ -18,8 +18,7 @@
   display: flex;
   align-items: center;
   gap: var(--auth-space-sm);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  white-space: nowrap;
   line-height: var(--auth-line-height-normal);
   animation: slideIn 0.3s ease-out;
 }
@@ -64,7 +63,7 @@
 /* ========== Responsive Styles ========== */
 
 /* Mobile */
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   .auth-message {
     padding: var(--auth-space-sm) var(--auth-space-md);
     font-size: var(--auth-font-sm);

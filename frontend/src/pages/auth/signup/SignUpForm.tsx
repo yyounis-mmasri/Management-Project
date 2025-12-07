@@ -33,7 +33,7 @@ export default function SignUpForm() {
           type="text"
           id="firstName"
           name="firstName"
-          placeholder="First name"
+          label="First name"
           value={formData.firstName}
           onChange={(e) => handleChange(e, setFormData)}
           required
@@ -43,7 +43,7 @@ export default function SignUpForm() {
           type="text"
           id="lastName"
           name="lastName"
-          placeholder="Last name"
+          label="Last name"
           value={formData.lastName}
           onChange={(e) => handleChange(e, setFormData)}
           required
@@ -54,7 +54,7 @@ export default function SignUpForm() {
         type="email"
         id="email"
         name="email"
-        placeholder="Email address"
+        label="Email address"
         value={formData.email}
         onChange={(e) => handleChange(e, setFormData)}
         required
@@ -63,6 +63,7 @@ export default function SignUpForm() {
       <PasswordInput
         id="password"
         name="password"
+        label="Password"
         placeholder="6+ characters"
         value={formData.password}
         onChange={(e) => handleChange(e, setFormData)}

@@ -154,7 +154,7 @@
 }
 
 /* ========== Tablet Responsive ========== */
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (max-width: 1024px) and (min-width: 601px) {
   .auth-container {
     flex-direction: column;
     height: auto;
@@ -190,7 +190,7 @@
 }
 
 /* ========== Mobile Responsive ========== */
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   .auth-container {
     flex-direction: column;
     height: auto;
@@ -223,8 +223,9 @@
   }
 
   .features {
-    flex-direction: column;
-    gap: var(--auth-space-md);
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--auth-space-lg);
   }
 
   .feature-icon {

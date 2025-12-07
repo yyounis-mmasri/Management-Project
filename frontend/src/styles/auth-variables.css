@@ -78,7 +78,7 @@
   /* Font Sizes */
   --auth-font-xs: 0.75rem;      /* 12px */
   --auth-font-sm: 0.875rem;     /* 14px */
-  --auth-font-base: 1rem;       /* 16px */
+  --auth-font-base: 0.94rem;       /* 16px */
   --auth-font-lg: 1.125rem;     /* 18px */
   --auth-font-xl: 1.25rem;      /* 20px */
   --auth-font-2xl: 1.5rem;      /* 24px */
@@ -134,7 +134,7 @@
   
   --auth-container-max-width: 420px;
   --auth-container-padding: 40px;
-  --auth-form-gap: 20px;
+  --auth-form-gap: 12px;
   --auth-input-height: 44px;
   --auth-button-height: 48px;
   
@@ -147,13 +147,13 @@
   
   /* ========== Responsive Breakpoints ========== */
   
-  --auth-breakpoint-mobile: 480px;
-  --auth-breakpoint-tablet: 768px;
-  --auth-breakpoint-desktop: 1024px;
+  --auth-breakpoint-mobile: 600px;
+  --auth-breakpoint-tablet: 1024px;
+  --auth-breakpoint-desktop: 1440px;
 }
 
-/* ========== Tablet Responsive (768px - 1023px) ========== */
-@media (max-width: 1023px) and (min-width: 768px) {
+/* ========== Tablet Responsive (601px - 1024px) ========== */
+@media (max-width: 1024px) and (min-width: 601px) {
   :root {
     --auth-container-max-width: 520px;
     --auth-container-padding: 32px;
@@ -163,8 +163,8 @@
   }
 }
 
-/* ========== Mobile Responsive (<768px) ========== */
-@media (max-width: 767px) {
+/* ========== Mobile Responsive (<=600px) ========== */
+@media (max-width: 600px) {
   :root {
     --auth-container-max-width: 100%;
     --auth-container-padding: 20px;

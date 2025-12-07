@@ -87,7 +87,7 @@
 /* ========== Responsive Styles ========== */
 
 /* Tablet */
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (max-width: 1024px) and (min-width: 601px) {
   .auth-button {
     padding: var(--auth-space-md) var(--auth-space-xl);
     font-size: var(--auth-font-base);
@@ -95,7 +95,7 @@
 }
 
 /* Mobile */
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   .auth-button {
     padding: var(--auth-space-lg) var(--auth-space-xl);
     font-size: var(--auth-font-base);

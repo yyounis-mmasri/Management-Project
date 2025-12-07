@@ -159,7 +159,7 @@
 }
 
 /* Responsive */
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (max-width: 1024px) and (min-width: 601px) {
   /* Tablet */
   .signin-container {
     max-width: var(--auth-container-max-width);
@@ -179,7 +179,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   /* Mobile */
   .signin-container {
     max-width: 100%;
