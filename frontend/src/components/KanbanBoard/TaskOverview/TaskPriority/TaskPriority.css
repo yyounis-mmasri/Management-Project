@@ -3,6 +3,11 @@
   gap: var(--spacing-md);
 }
 
+.task-priority-container .ripple-container {
+  border-radius: var(--spacing-sm);
+  overflow: hidden;
+}
+
 .task-priority-button {
   background-color: transparent;
   border: none;
@@ -16,16 +21,41 @@
   font-weight: var(--font-medium);
   color: var(--kanban-text-primary);
   transition: background-color var(--transition-normal),
-    font-weight var(--transition-normal);
+    font-weight var(--transition-normal), outline var(--transition-normal);
   gap: var(--spacing-sm);
   border: var(--kanban-priority-button);
+  outline: 2px solid transparent;
+  outline-offset: 0px;
 }
 .task-priority-button.active {
-  outline: var(--kanban-priority-button-active);
+  border: 2px solid black;
 }
 
 .task-priority-button img {
   width: var(--icon-xs);
   height: var(--icon-xs);
   margin-right: var(--spacing-sm);
+}
+
+@media (max-width: 1024px) {
+  .task-priority-button {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 600px) {
+  .task-priority-container {
+    flex-wrap: wrap;
+  }
+
+  .task-priority-button {
+    padding: var(--spacing-xs) var(--spacing-xs);
+    font-size: var(--font-size-xs);
+    gap: var(--spacing-xs);
+  }
+
+  .task-priority-button img {
+    margin-right: 0;
+  }
 }

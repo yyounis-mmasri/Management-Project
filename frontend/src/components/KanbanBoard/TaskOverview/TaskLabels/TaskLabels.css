@@ -11,3 +11,17 @@
   font-weight: var(--font-regular);
   color: #fff;
 }
+
+@media (max-width: 1024px) {
+  .task-label {
+    font-size: var(--font-size-sm);
+    padding: 0.15rem var(--spacing-sm);
+  }
+}
+
+@media (max-width: 600px) {
+  .task-label {
+    font-size: var(--font-size-xs);
+    padding: 0.1rem var(--spacing-xs);
+  }
+}

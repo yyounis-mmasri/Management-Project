@@ -14,7 +14,6 @@
 .calendar-backdrop.open {
   visibility: visible;
   opacity: 1;
-  transition: visibility var(--transition-fast), opacity var(--transition-fast);
 }
 
 .calendar-container {
@@ -120,4 +119,53 @@
 
 .calendar-apply-button:hover {
   background-color: var(--kanban-apply-button-hover);
+}
+
+@media (max-width: 1024px) {
+  .calendar-container {
+    padding: var(--spacing-xl);
+    gap: var(--spacing-2xl);
+  }
+
+  .calendars {
+    gap: var(--spacing-md);
+  }
+
+  .react-datepicker__current-month {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (max-width: 600px) {
+  .calendar-container {
+    padding: var(--spacing-md);
+    gap: var(--spacing-xl);
+    max-width: 95vw;
+  }
+
+  .calendars {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .react-datepicker__current-month {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .react-datepicker__day-name,
+  .react-datepicker__day {
+    width: var(--icon-md);
+    line-height: var(--icon-md);
+  }
+
+  .calendar-action-buttons {
+    gap: var(--spacing-sm);
+  }
+
+  .calendar-cancel-button,
+  .calendar-apply-button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
 }

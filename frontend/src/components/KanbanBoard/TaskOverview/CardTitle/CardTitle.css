@@ -9,7 +9,7 @@
   width: 100%;
   outline: none;
   background-color: transparent;
-  margin: var(--spacing-2xl) 0 var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -24,7 +24,5 @@
   padding: 0.2rem 0.4rem;
   border: 2px solid var(--kanban-text-primary);
   background-color: var(--kanban-card-bg);
-  transition: border var(--transition-fast),
-    background-color var(--transition-fast), padding var(--transition-fast);
   cursor: text;
 }

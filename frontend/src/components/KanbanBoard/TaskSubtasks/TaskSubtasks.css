@@ -1,6 +1,17 @@
 .task-subtasks-root {
-  padding: 1.5rem 0;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .task-subtasks-root {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .task-subtasks-root {
+    gap: 0.75rem;
+  }
 }

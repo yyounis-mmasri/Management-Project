@@ -3,7 +3,7 @@ import initialBoard from "../../../mocks/initialBoard";
 import "./KanbanCardStatus.css";
 import getCardStatus from "../../../utils/getCardStatus";
 import { assets } from "../../../assets/assets";
-import useClickOutside from "../../../hooks/useClickOutside";
+import { useClickOutsideEffect } from "../../../utils/useClickOutsideEffect";
 import type { BoardCard } from "../../../types/BoardCard";
 
 interface KanbanCardStatusProps {
@@ -16,10 +16,7 @@ const KanbanCardStatus = ({ card }: KanbanCardStatusProps) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  useClickOutside<HTMLDivElement>({
-    ref: dropdownRef,
-    onClickOutside: () => setShowDropdown(false),
-  });
+  useClickOutsideEffect(dropdownRef, () => setShowDropdown(false));
 
   useEffect(() => {
     setCurrentStatus(status);

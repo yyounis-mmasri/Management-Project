@@ -29,3 +29,16 @@ img {
   height: var(--icon-xl);
   border-radius: 50%;
 }
+
+@media (max-width: 1024px) {
+  h4 {
+    min-width: 5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  h4 {
+    min-width: 6rem;
+    font-size: var(--font-size-sm);
+  }
+}

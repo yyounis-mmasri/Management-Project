@@ -15,6 +15,7 @@ export function getInitialSubtasks(
   // Primary: use the card's subtask id references
   if (Array.isArray(cardSubtaskIds) && cardSubtaskIds.length > 0) {
     const result: Subtask[] = [];
+    // Search all subtask arrays for each requested id
     for (const id of cardSubtaskIds) {
       for (const key in data) {
         const found = data[key].find((s) => s.id === id);
