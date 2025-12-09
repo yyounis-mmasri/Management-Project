@@ -1,13 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../../context/AuthContext";
+import { createSignUpHandler } from "../../../utils/auth";
+import { AuthInput, AuthButton, AuthMessage, PasswordInput } from "../../../components/shared";
 import handleChange from "../../../utils/handleChange";
-import handleSubmit from "../../../utils/handleSubmit";
+import type { SignUpFormData } from "../../../types/auth";
 import "./SignUp.css";
-interface SignUpFormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-}
 
 export default function SignUpForm() {
   const [formData, setFormData] = useState<SignUpFormData>({
@@ -16,75 +14,63 @@ export default function SignUpForm() {
     email: "",
     password: "",
   });
-
-  const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  
+  const { login } = useAuth();
+  const navigate = useNavigate();
+  
+  const handleSubmit = createSignUpHandler(login, navigate, setErrors);
 
   return (
     <form onSubmit={(e) => handleSubmit(e, formData)} className="auth-form">
+      {Object.keys(errors).length > 0 && (
+        <AuthMessage type="error">
+          {Object.values(errors)[0]}
+        </AuthMessage>
+      )}
       <div className="form-row">
-        <div className="form-group">
-          <label htmlFor="firstName">First name</label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            value={formData.firstName}
-            onChange={(e) => handleChange(e, setFormData)}
-            required
-          />
-        </div>
+        <AuthInput
+          type="text"
+          id="firstName"
+          name="firstName"
+          label="First name"
+          value={formData.firstName}
+          onChange={(e) => handleChange(e, setFormData)}
+          required
+        />
 
-        <div className="form-group">
-          <label htmlFor="lastName">Last name</label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            value={formData.lastName}
-            onChange={(e) => handleChange(e, setFormData)}
-            required
-          />
-        </div>
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="email">Email address</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
+        <AuthInput
+          type="text"
+          id="lastName"
+          name="lastName"
+          label="Last name"
+          value={formData.lastName}
           onChange={(e) => handleChange(e, setFormData)}
           required
         />
       </div>
 
-      <div className="form-group">
-        <label htmlFor="password">Password</label>
-        <div className="password-input-wrapper">
-          <input
-            type={showPassword ? "text" : "password"}
-            id="password"
-            name="password"
-            value={formData.password}
-            onChange={(e) => handleChange(e, setFormData)}
-            placeholder="6+ characters"
-            required
-          />
-          <button
-            type="button"
-            className="password-toggle"
-            onClick={() => setShowPassword(!showPassword)}
-            aria-label="Toggle password visibility"
-          >
-            {showPassword ? "👁️" : "🐾"}
-          </button>
-        </div>
-      </div>
+      <AuthInput
+        type="email"
+        id="email"
+        name="email"
+        label="Email address"
+        value={formData.email}
+        onChange={(e) => handleChange(e, setFormData)}
+        required
+      />
 
-      <button type="submit" className="submit-button">
-        Create account
-      </button>
+      <PasswordInput
+        id="password"
+        name="password"
+        label="Password"
+        placeholder="6+ characters"
+        value={formData.password}
+        onChange={(e) => handleChange(e, setFormData)}
+        required
+      />
+
+      <AuthButton type="submit">Create account</AuthButton>
     </form>
   );
 }

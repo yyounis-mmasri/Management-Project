@@ -1,8 +1,15 @@
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import AuthLayout from "../../../components/AuthLayout/AuthLayout";
+import { AUTH_CONSTANTS, createResetPasswordHandler } from "../../../utils/auth";
+import { AuthInput, AuthButton, AuthMessage, AuthLink } from "../../../components/shared";
 import "./ResetPassword.css";
 
 const ResetPassword: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = createResetPasswordHandler(setError, setSuccess);
   return (
     <AuthLayout>
       <div className="reset-password-container">
@@ -21,28 +28,36 @@ const ResetPassword: React.FC = () => {
           email you a link to reset your password.
         </p>
 
-        <form className="reset-form">
+        <form className="reset-form" onSubmit={(e) => handleSubmit(e, email)}>
           {/* Email Input */}
-          <div className="form-group">
-            <label className="form-label">Email address</label>
-            <input
-              type="email"
-              className="form-input"
-              placeholder="example@gmail.com"
-              required
-            />
-          </div>
+          <AuthInput
+            type="email"
+            id="reset-email"
+            label="Email address"
+            placeholder="example@gmail.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+
+          {/* Error message */}
+          {error && <AuthMessage type="error">{error}</AuthMessage>}
+          
+          {/* Success message */}
+          {success && (
+            <AuthMessage type="success">
+              {AUTH_CONSTANTS.MESSAGES.RESET_EMAIL_SENT}
+            </AuthMessage>
+          )}
 
           {/* Submit Button */}
-          <button type="submit" className="submit-button">
-            Send request
-          </button>
+          <AuthButton type="submit">Send request</AuthButton>
 
           {/* Return Link */}
           <div className="return-link">
-            <Link to="/auth/sign-in">
+            <AuthLink to="/auth/sign-in">
               <span className="arrow">←</span> Return to sign in
-            </Link>
+            </AuthLink>
           </div>
         </form>
       </div>

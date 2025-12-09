@@ -1,19 +1,9 @@
-import { type FC } from "react";
-import { Link } from "react-router-dom";
-import "./SignIn.css";
+import { type FC } from 'react';
+import type { SignInFormProps } from '../../../types/auth';
+import { AuthInput, AuthButton, AuthMessage, AuthLink } from '../../../components/shared';
+import './SignIn.css';
 
-interface Props {
-  email: string;
-  password: string;
-  showPassword: boolean;
-  error?: string;
-  onEmailChange: (value: string) => void;
-  onPasswordChange: (value: string) => void;
-  onToggleShow: () => void;
-  onSubmit: (e: React.FormEvent) => void;
-}
-
-const FormSignIn: FC<Props> = ({
+const FormSignIn: FC<SignInFormProps> = ({
   email,
   password,
   showPassword,
@@ -26,32 +16,33 @@ const FormSignIn: FC<Props> = ({
   return (
     <form className="signin-form" onSubmit={onSubmit}>
       {/* Email Input */}
-      <div className="form-group">
-        <label className="form-label">Email address</label>
-        <input
-          type="email"
-          className="form-input"
-          value={email}
-          onChange={(e) => onEmailChange(e.target.value)}
-          placeholder="demo@minimals.cc"
-        />
-      </div>
+      <AuthInput
+        type="email"
+        id="email"
+        label="Email address"
+        value={email}
+        onChange={(e) => onEmailChange(e.target.value)}
+        placeholder="example@gmail.com"
+        required
+      />
 
       {/* Password Input */}
-      <div className="form-group">
+      <div className="password-field-wrapper">
         <div className="password-header">
-          <label className="form-label">Password</label>
-          <Link to="/auth/reset-password" className="forgot-link">
+          <span className="password-label">Password</span>
+          <AuthLink to="/auth/reset-password" variant="secondary">
             Forgot password?
-          </Link>
+          </AuthLink>
         </div>
         <div className="password-input-wrapper">
           <input
-            type={showPassword ? "text" : "password"}
+            type={showPassword ? 'text' : 'password'}
+            id="password"
             className="form-input"
             value={password}
             onChange={(e) => onPasswordChange(e.target.value)}
-            placeholder="••••••••"
+            placeholder="6+ characters"
+            required
           />
           <button
             type="button"
@@ -59,18 +50,16 @@ const FormSignIn: FC<Props> = ({
             onClick={onToggleShow}
             aria-label="Toggle password visibility"
           >
-            {showPassword ? "👁️" : "👁️‍🗨️"}
+            {showPassword ? '👁️' : '🔒'}
           </button>
         </div>
       </div>
 
       {/* Error message */}
-      {error && <div className="error-message">{error}</div>}
+      {error && <AuthMessage type="error">{error}</AuthMessage>}
 
       {/* Submit Button */}
-      <button type="submit" className="submit-button">
-        Sign in
-      </button>
+      <AuthButton type="submit">Sign in</AuthButton>
     </form>
   );
 };
