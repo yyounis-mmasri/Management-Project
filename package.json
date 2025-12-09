@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "react-datepicker": "^8.10.0",
+    "yet-another-react-lightbox": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/react-datepicker": "^6.2.0"
+  }
+}
