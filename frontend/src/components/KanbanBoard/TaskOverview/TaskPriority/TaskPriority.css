@@ -1,30 +1,61 @@
 .task-priority-container {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--spacing-md);
+}
+
+.task-priority-container .ripple-container {
+  border-radius: var(--spacing-sm);
+  overflow: hidden;
 }
 
 .task-priority-button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  padding: 0.3rem 0.5rem;
-  border-radius: 0.3rem;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--spacing-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-medium);
   color: var(--kanban-text-primary);
-  transition: background-color 0.3s ease, font-weight 0.3s ease;
-  gap: 0.3rem;
+  transition: background-color var(--transition-normal),
+    font-weight var(--transition-normal), outline var(--transition-normal);
+  gap: var(--spacing-sm);
   border: var(--kanban-priority-button);
+  outline: 2px solid transparent;
+  outline-offset: 0px;
 }
 .task-priority-button.active {
-  outline: var(--kanban-priority-button-active);
+  border: 2px solid black;
 }
 
 .task-priority-button img {
-  width: 1rem;
-  height: 1rem;
-  margin-right: 0.3rem;
+  width: var(--icon-xs);
+  height: var(--icon-xs);
+  margin-right: var(--spacing-sm);
+}
+
+@media (max-width: 1024px) {
+  .task-priority-button {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 600px) {
+  .task-priority-container {
+    flex-wrap: wrap;
+  }
+
+  .task-priority-button {
+    padding: var(--spacing-xs) var(--spacing-xs);
+    font-size: var(--font-size-xs);
+    gap: var(--spacing-xs);
+  }
+
+  .task-priority-button img {
+    margin-right: 0;
+  }
 }

@@ -1,8 +1,12 @@
 .comment-input-bar-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   min-height: var(--comment-bar-height);
-  padding: 1.5rem 0;
+  align-self: center;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
 }
 
 .user-icon {
@@ -22,8 +26,8 @@
 
 .comment-input-bar {
   border: 1px solid var(--kanban-border-color);
-  padding: 0.5rem;
-  border-radius: 0.5rem;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
   width: 100%;
 }
 
@@ -31,7 +35,7 @@
   width: 100%;
   border: none;
   resize: none;
-  font-size: 0.7rem;
+  font-size: var(--font-size-base);
   font-family: inherit;
   outline: none;
   background-color: transparent;
@@ -55,7 +59,8 @@
   cursor: pointer;
   padding: 4px;
   border-radius: 50%;
-  transition: background-color 0.2s ease, filter 0.2s ease;
+  transition: background-color var(--transition-fast),
+    filter var(--transition-fast);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,8 +70,8 @@
 }
 
 .attach-button img {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--icon-sm);
+  height: var(--icon-sm);
 }
 
 .send-button {
@@ -74,10 +79,10 @@
   color: white;
   border: none;
   padding: 6px 12px;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-md);
   cursor: pointer;
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-semi-bold);
   flex: 0 0 auto;
   height: 2.25rem;
 }

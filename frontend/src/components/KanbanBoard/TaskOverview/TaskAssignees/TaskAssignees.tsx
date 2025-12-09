@@ -3,6 +3,7 @@ import "./TaskAssignees.css";
 import type { BoardCard } from "../../../../types/BoardCard";
 import Tooltip from "../../../../utils/Tooltip/Tooltip";
 import AssigneesContacts from "../../AssigneesContacts/AssigneesContacts";
+import Ripple from "../../../shared/Ripple/Ripple";
 
 const TaskAssignees = ({ card }: { card: BoardCard }) => {
   const [showContacts, setShowContacts] = useState(false);
@@ -17,12 +18,14 @@ const TaskAssignees = ({ card }: { card: BoardCard }) => {
         />
       ))}
       <Tooltip text="Add Assignee">
-        <div
-          className="add-assignee-container"
-          onClick={() => setShowContacts((prev) => !prev)}
-        >
-          +
-        </div>
+        <Ripple>
+          <div
+            className="add-assignee-container"
+            onClick={() => setShowContacts((prev) => !prev)}
+          >
+            +
+          </div>
+        </Ripple>
       </Tooltip>
       <AssigneesContacts
         assignees={card.assignees}

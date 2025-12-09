@@ -7,6 +7,11 @@
   background-color: var(--kanban-bg-hover);
   border-radius: 0.5rem;
   position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  align-items: center;
 }
 
 .kanban-card-status img {
@@ -50,7 +55,6 @@
   opacity: 1;
   max-height: 10rem;
   transform: translateY(0);
-  transition: opacity 0.25s ease, max-height 0.25s ease, transform 0.25s ease;
 }
 
 .kanban-card-status-option {

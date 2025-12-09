@@ -4,6 +4,7 @@ import ConfirmDeleteDialog from "../ConfirmDeleteDialog/ConfirmDeleteDialog";
 import "./KanbanCardActions.css";
 import type { BoardCard } from "../../../types/BoardCard";
 import type { ColumnHeaderBag } from "../../../types/ColumnHeaderBag";
+import Ripple from "../../shared/Ripple/Ripple";
 
 interface KanbanCardActionsProps {
   selectedCard: BoardCard;
@@ -21,23 +22,29 @@ const KanbanCardActions = ({
   return (
     <>
       <div className="action-buttons">
-        <button
-          className={`like-button ${liked ? "liked" : ""}`}
-          onClick={() => setLiked(!liked)}
-        >
-          <img src={`${assets[liked ? "liked" : "like"]}`} alt="Like" />
-        </button>
-        <button
-          className="delete-card-button"
-          onClick={() => {
-            setShowConfirmDelete(true);
-          }}
-        >
-          <img src={assets.trash} alt="Delete" />
-        </button>
-        <button className="more-options-button">
-          <img src={assets.threeDots} alt="More Options" />
-        </button>
+        <Ripple>
+          <button
+            className={`like-button ${liked ? "liked" : ""}`}
+            onClick={() => setLiked(!liked)}
+          >
+            <img src={`${assets[liked ? "liked" : "like"]}`} alt="Like" />
+          </button>
+        </Ripple>
+        <Ripple>
+          <button
+            className="delete-card-button"
+            onClick={() => {
+              setShowConfirmDelete(true);
+            }}
+          >
+            <img src={assets.trash} alt="Delete" />
+          </button>
+        </Ripple>
+        <Ripple>
+          <button className="more-options-button">
+            <img src={assets.threeDots} alt="More Options" />
+          </button>
+        </Ripple>
       </div>
       <ConfirmDeleteDialog
         selectedCard={selectedCard}

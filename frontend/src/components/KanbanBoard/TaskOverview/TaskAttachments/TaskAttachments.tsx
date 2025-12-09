@@ -6,6 +6,7 @@ import { handleAddAttachment } from "../../../../utils/handleAddAttachment";
 import Tooltip from "../../../../utils/Tooltip/Tooltip";
 import getAttachmentName from "../../../../utils/getAttachmentName";
 import { assets } from "../../../../assets/assets";
+import Ripple from "../../../shared/Ripple/Ripple";
 
 const TaskAttachments = ({ card }: { card: BoardCard }) => {
   const [, forceUpdate] = useState({});
@@ -30,12 +31,16 @@ const TaskAttachments = ({ card }: { card: BoardCard }) => {
           </Tooltip>
         );
       })}
-      <button
-        className="add-attachment-btn"
-        onClick={() => handleAddAttachment(card, () => forceUpdate({}))}
-      >
-        <img src={assets.upload} alt="Add Attachment" />
-      </button>
+      <Tooltip text="Add Attachment">
+        <Ripple>
+          <button
+            className="add-attachment-btn"
+            onClick={() => handleAddAttachment(card, () => forceUpdate({}))}
+          >
+            <img src={assets.upload} alt="Add Attachment" />
+          </button>
+        </Ripple>
+      </Tooltip>
     </div>
   );
 };

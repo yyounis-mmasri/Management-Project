@@ -18,7 +18,9 @@ const Ripple = ({ children, className = "" }: RippleProps) => {
 
   const addRipple = (e: MouseEvent<HTMLDivElement>) => {
     const rippleContainer = e.currentTarget.getBoundingClientRect();
+    // Use larger dimension to ensure ripple covers entire container
     const size = Math.max(rippleContainer.width, rippleContainer.height);
+    // Center ripple at click position
     const x = e.clientX - rippleContainer.left - size / 2;
     const y = e.clientY - rippleContainer.top - size / 2;
 
@@ -31,6 +33,7 @@ const Ripple = ({ children, className = "" }: RippleProps) => {
 
     setRipples((prev) => [...prev, newRipple]);
 
+    // Remove ripple from state after animation completes (600ms)
     setTimeout(() => {
       setRipples((prev) => prev.filter((r) => r.key !== newRipple.key));
     }, 600);
