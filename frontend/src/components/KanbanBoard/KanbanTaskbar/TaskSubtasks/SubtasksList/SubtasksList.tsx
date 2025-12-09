@@ -1,4 +1,4 @@
-import type { Subtask } from "../../../../types/Subtask";
+import type { Subtask } from "../../../../../types/Subtask";
 import "./SubtasksList.css";
 
 interface SubtasksListProps {

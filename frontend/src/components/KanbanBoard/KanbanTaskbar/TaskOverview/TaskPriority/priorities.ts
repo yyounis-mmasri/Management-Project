@@ -1,6 +1,6 @@
-import { assets } from "../../../../assets/assets";
-import { Priority } from "../../../../types/Priority";
-import type { PriorityOption } from "../../../../types/PriorityOption";
+import { assets } from "../../../../../assets/assets";
+import { Priority } from "../../../../../types/Priority";
+import type { PriorityOption } from "../../../../../types/PriorityOption";
 
 const priorities: PriorityOption[] = [
   { value: Priority.Low, label: "Low", imgURL: assets.low },

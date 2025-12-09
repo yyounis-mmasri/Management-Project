@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { assets } from "../../../assets/assets";
 import type { ColumnOptionsBtnProps } from "../../../types/ColumnOptionsBtn";
 import "./ColumnOptionsBtn.css";
@@ -7,14 +7,16 @@ import useClickOutside from "../../../hooks/useClickOutside";
 const ColumnOptionsBtn = ({
   column,
   bag,
-  containerRef,
   setIsEditable,
 }: ColumnOptionsBtnProps) => {
   const [optionsVisible, setOptionsVisible] = useState(false);
+  const optionsRef = useRef<HTMLDivElement>(null);
+  
   useClickOutside<HTMLDivElement>({
-    ref: containerRef,
+    ref: optionsRef,
     onClickOutside: () => setOptionsVisible(false),
   });
+  
   return (
     <div className="kanban-column-options-container">
       <button
@@ -26,7 +28,7 @@ const ColumnOptionsBtn = ({
         <img src={assets.threeDots} alt="Options" />
       </button>
       {optionsVisible && (
-        <div className="kanban-column-options" ref={containerRef}>
+        <div className="kanban-column-options" ref={optionsRef}>
           <button
             className="kanban-column-rename-button"
             onClick={() => {

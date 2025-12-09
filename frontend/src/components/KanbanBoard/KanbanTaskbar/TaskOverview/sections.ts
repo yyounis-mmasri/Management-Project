@@ -1,4 +1,4 @@
-import type { TaskSection } from "../../../types/TaskSection";
+import type { TaskSection } from "../../../../types/TaskSection";
 import TaskAssignees from "./TaskAssignees/TaskAssignees";
 import TaskAttachments from "./TaskAttachments/TaskAttachments";
 import TaskDescription from "./TaskDescription/TaskDescription";

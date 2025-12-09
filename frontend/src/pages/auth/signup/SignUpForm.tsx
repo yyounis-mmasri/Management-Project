@@ -4,7 +4,7 @@ import { useAuth } from "../../../context/AuthContext";
 import { createSignUpHandler } from "../../../utils/auth";
 import { AuthInput, AuthButton, AuthMessage, PasswordInput } from "../../../components/shared";
 import handleChange from "../../../utils/handleChange";
-import type { SignUpFormData } from "../../../types/auth";
+import type { SignUpFormData, FormErrors } from "../../../types/auth";
 import "./SignUp.css";
 
 export default function SignUpForm() {
@@ -14,7 +14,7 @@ export default function SignUpForm() {
     email: "",
     password: "",
   });
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState<FormErrors>({});
   
   const { login } = useAuth();
   const navigate = useNavigate();

@@ -1,5 +1,5 @@
 import type { NavigateFunction } from 'react-router-dom';
-import type { SignUpFormData } from '../../types/auth';
+import type { SignUpFormData, FormErrors } from '../../types/auth';
 import { validateSignUpForm } from './validateFormData';
 
 /**
@@ -12,7 +12,7 @@ import { validateSignUpForm } from './validateFormData';
 export function createSignUpHandler(
   login: () => void,
   navigate: NavigateFunction,
-  setErrors: (errors: Record<string, string>) => void
+  setErrors: (errors: FormErrors) => void
 ) {
   return (e: React.FormEvent, formData: SignUpFormData) => {
     e.preventDefault();

@@ -27,7 +27,6 @@ const ColumnHeader = ({ column, bag }: ColumnHeaderProps) => {
         <ColumnTitle
           column={column}
           bag={bag}
-          containerRef={containerRef}
           isEditable={isEditable}
           setIsEditable={setIsEditable}
         />
@@ -36,7 +35,6 @@ const ColumnHeader = ({ column, bag }: ColumnHeaderProps) => {
           <ColumnOptionsBtn
             column={column}
             bag={bag}
-            containerRef={containerRef}
             setIsEditable={setIsEditable}
           />
         </div>

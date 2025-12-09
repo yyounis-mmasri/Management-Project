@@ -7,19 +7,19 @@ import "./ColumnTitle.css";
 const ColumnTitle = ({
   column,
   bag,
-  containerRef,
   isEditable,
   setIsEditable,
 }: ColumnTitleProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
+  const titleRef = useRef<HTMLDivElement>(null);
 
   useClickOutside<HTMLDivElement>({
-    ref: containerRef,
+    ref: titleRef,
     onClickOutside: () => setIsEditable(false),
   });
 
   return (
-    <>
+    <div ref={titleRef}>
       {isEditable ? (
         <input
           type="text"
@@ -43,7 +43,7 @@ const ColumnTitle = ({
           {column.title}
         </span>
       )}
-    </>
+    </div>
   );
 };
 

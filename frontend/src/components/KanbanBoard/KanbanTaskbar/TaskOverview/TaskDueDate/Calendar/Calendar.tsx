@@ -1,7 +1,7 @@
 import { createPortal } from "react-dom";
 import DatePicker from "react-datepicker";
-import startDateHandler from "../../../../../utils/date/startDateHandler";
-import dueDateHandler from "../../../../../utils/date/dueDateHandler";
+import startDateHandler from "../../../../../../utils/date/startDateHandler";
+import dueDateHandler from "../../../../../../utils/date/dueDateHandler";
 import "./Calendar.css";
 
 interface CalendarProps {
