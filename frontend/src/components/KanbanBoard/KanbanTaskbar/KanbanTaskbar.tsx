@@ -1,13 +1,13 @@
 import { useState } from "react";
 import "./KanbanTaskbar.css";
-import KanbanCardStatus from "../KanbanCardStatus/KanbanCardStatus";
-import KanbanCardActions from "../KanbanCardActions/KanbanCardActions";
-import KanbanCardTabs from "./KanbanCardTabs/KanbanCardTabs.tsx";
+import KanbanCardStatus from "./KanbanCardStatus/KanbanCardStatus";
+import KanbanCardActions from "./KanbanCardActions/KanbanCardActions";
+import KanbanCardTabs from "./KanbanCardTabs/KanbanCardTabs";
 import type { BoardCard } from "../../../types/BoardCard";
 import type { ColumnHeaderBag } from "../../../types/ColumnHeaderBag";
 import type { TabType } from "../../../types/TabType";
-import { TabComponents } from "./TabComponents.tsx";
-import { assets } from "../../../assets/assets.ts";
+import { TabComponents } from "./TabComponents";
+import { assets } from "../../../assets/assets";
 
 interface KanbanTaskbarProps {
   show: boolean;
