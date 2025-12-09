@@ -159,7 +159,7 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) and (min-width: 601px) {
+@media (max-width: 1024px) {
   /* Tablet */
   .signin-container {
     max-width: var(--auth-container-max-width);

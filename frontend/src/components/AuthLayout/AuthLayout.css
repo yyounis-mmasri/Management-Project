@@ -154,7 +154,7 @@
 }
 
 /* ========== Tablet Responsive ========== */
-@media (max-width: 1024px) and (min-width: 601px) {
+@media (max-width: 1024px) {
   .auth-container {
     flex-direction: column;
     height: auto;

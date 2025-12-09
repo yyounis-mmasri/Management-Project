@@ -4,7 +4,8 @@
   color: var(--auth-primary-color);
   text-decoration: none;
   font-weight: var(--auth-font-semibold);
-  transition: all var(--auth-transition-base);
+  transition: color var(--auth-transition-base),
+              transform var(--auth-transition-base);
   display: inline-flex;
   align-items: center;
   gap: var(--auth-space-xs);

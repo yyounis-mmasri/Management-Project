@@ -77,7 +77,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) and (min-width: 601px) {
+@media (max-width: 1024px) {
   /* Tablet */
   .form-wrapper {
     padding: 0 var(--auth-space-2xl);

@@ -153,7 +153,7 @@
 }
 
 /* ========== Tablet Responsive (601px - 1024px) ========== */
-@media (max-width: 1024px) and (min-width: 601px) {
+@media (max-width: 1024px) {
   :root {
     --auth-container-max-width: 520px;
     --auth-container-padding: 32px;

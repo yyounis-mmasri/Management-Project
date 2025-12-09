@@ -7,7 +7,9 @@
   font-size: var(--auth-font-base);
   font-weight: var(--auth-font-semibold);
   cursor: pointer;
-  transition: all var(--auth-transition-slow);
+  transition: background-color var(--auth-transition-slow),
+              box-shadow var(--auth-transition-slow),
+              transform var(--auth-transition-slow);
   margin-top: var(--auth-space-sm);
   font-family: inherit;
   letter-spacing: 0.3px;
@@ -87,7 +89,7 @@
 /* ========== Responsive Styles ========== */
 
 /* Tablet */
-@media (max-width: 1024px) and (min-width: 601px) {
+@media (max-width: 1024px) {
   .auth-button {
     padding: var(--auth-space-md) var(--auth-space-xl);
     font-size: var(--auth-font-base);
