@@ -1,13 +1,14 @@
 import { useMemo, useState } from "react";
 import type { BoardCard } from "../../../types/BoardCard";
 import "./TaskSubtasks.css";
-import {
-  getInitialSubtasks,
-  type Subtask,
-} from "../../../utils/subtasks/getInitialSubtasks";
+import { getInitialSubtasks } from "../../../utils/subtasks/getInitialSubtasks";
+import type { Subtask } from "../../../types/Subtask";
 import { getSubtasksProgress } from "../../../utils/getSubtasksProgress";
 import { toggleSubtask } from "../../../utils/subtasks/toggleSubtask";
-import { addSubtaskItem } from "../../../utils/subtasks/addSubtaskItem";
+import { handleAddSubtask } from "../../../utils/subtasks/handleAddSubtask";
+import SubtasksHeader from "./SubtasksHeader/SubtasksHeader";
+import SubtasksList from "./SubtasksList/SubtasksList";
+import SubtasksAdder from "./SubtasksAdder/SubtasksAdder";
 
 interface Props {
   selectedCard: BoardCard;
@@ -28,52 +29,19 @@ const TaskSubtasks = ({ selectedCard }: Props) => {
     setItems((prev) => toggleSubtask(prev, id));
   };
 
-  const handleAddSubtask = () => {
-    setItems((prev) => addSubtaskItem(prev, newText));
-    setNewText("");
+  const onAddSubtask = () => {
+    handleAddSubtask(items, newText, setItems, setNewText);
   };
 
   return (
     <div className="task-subtasks-root">
-      <div className="task-subtasks-header">
-        <div className="task-subtasks-count">{`${completed} of ${total}`}</div>
-        <div className="task-subtasks-progress">
-          <div
-            className="task-subtasks-progress-bar"
-            style={{ width: `${percent}%` }}
-          />
-        </div>
-      </div>
-
-      <ul className="task-subtasks-list">
-        {items.map((s) => (
-          <li key={s.id} className="task-subtasks-item">
-            <label>
-              <input
-                type="checkbox"
-                checked={s.checked}
-                onChange={() => handleToggle(s.id)}
-              />
-              <span className={s.checked ? "checked" : ""}>{s.text}</span>
-            </label>
-          </li>
-        ))}
-        {items.length === 0 && (
-          <li className="task-subtasks-empty">No subtasks yet</li>
-        )}
-      </ul>
-
-      <div className="task-subtasks-adder">
-        <input
-          placeholder="Add subtask"
-          value={newText}
-          onChange={(e) => setNewText(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && handleAddSubtask()}
-        />
-        <button type="button" onClick={handleAddSubtask}>
-          Add
-        </button>
-      </div>
+      <SubtasksHeader completed={completed} total={total} percent={percent} />
+      <SubtasksList items={items} onToggle={handleToggle} />
+      <SubtasksAdder
+        value={newText}
+        onChange={setNewText}
+        onAdd={onAddSubtask}
+      />
     </div>
   );
 };

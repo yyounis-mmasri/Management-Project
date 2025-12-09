@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./CardTitle.css";
 import type { BoardCard } from "../../../../types/BoardCard";
 import handleCardRename from "../../../../utils/handleCardRename";
+import { useResetOnCardChange } from "../../../../hooks/useResetOnCardChange";
 
 interface CardTitleProps {
   selectedCard: BoardCard;
@@ -10,9 +11,9 @@ interface CardTitleProps {
 const CardTitle = ({ selectedCard }: CardTitleProps) => {
   const [isFocused, setIsFocused] = useState(false);
   const [newTitle, setNewTitle] = useState(selectedCard.title);
-  useEffect(() => {
-    setIsFocused(false);
-  }, [selectedCard]);
+
+  useResetOnCardChange(selectedCard, () => setIsFocused(false));
+
   return (
     <div className="card-title-container">
       <input

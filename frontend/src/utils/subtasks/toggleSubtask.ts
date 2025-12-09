@@ -1,4 +1,4 @@
-import type { Subtask } from "./getInitialSubtasks";
+import type { Subtask } from "../../types/Subtask";
 
 /**
  * Toggles the `checked` state of a subtask by id.

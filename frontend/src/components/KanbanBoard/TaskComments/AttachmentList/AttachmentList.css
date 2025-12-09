@@ -109,6 +109,8 @@
   -webkit-user-select: none;
   -webkit-touch-callout: none;
   border-radius: 10px;
+  width: auto !important;
+  height: auto !important;
 }
 .yarl__slide_image_cover {
   height: 100%;
@@ -123,8 +125,11 @@
   .yarl__slide_wrapper:not(.yarl__slide_wrapper_interactive)
     .yarl__slide_image {
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
   }
 }
 .yarl__slide_placeholder {

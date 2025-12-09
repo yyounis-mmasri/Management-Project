@@ -1,0 +1,84 @@
+.task-subtasks-adder {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.task-subtasks-adder input {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #e6e7ea;
+  background: #ffffff;
+  font-size: var(--font-size-lg);
+}
+
+.task-subtasks-adder button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #e6e7ea;
+  background: #ffffff;
+  color: #0f172a;
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+  box-shadow: var(--shadow-xs);
+}
+
+.task-subtasks-adder button::before {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  line-height: 1.125rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  background: transparent;
+  color: #0f172a;
+  font-weight: var(--font-bold);
+}
+
+.task-subtasks-adder button:hover {
+  background: #f8fafc;
+  border-color: #d1d5db;
+}
+
+.task-subtasks-adder button img {
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (max-width: 520px) {
+  .task-subtasks-adder input {
+    font-size: var(--font-size-lg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .task-subtasks-adder {
+    gap: 6px;
+  }
+
+  .task-subtasks-adder input {
+    padding: 6px 8px;
+    font-size: var(--font-size-base);
+  }
+
+  .task-subtasks-adder button {
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .task-subtasks-adder input {
+    padding: 4px 6px;
+    font-size: var(--font-size-sm);
+  }
+
+  .task-subtasks-adder button {
+    padding: 4px 10px;
+    font-size: var(--font-size-sm);
+  }
+}

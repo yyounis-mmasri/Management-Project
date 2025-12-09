@@ -3,17 +3,30 @@
   align-items: center;
   justify-content: center;
   min-width: 3rem;
-  gap: 0.5rem;
-  font-size: 0.7rem;
-  font-weight: 500;
+  gap: var(--spacing-md);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-medium);
   cursor: pointer;
-  padding: 0.4rem 0.3rem;
-  border-radius: 0.5rem;
+  padding: 0.4rem var(--spacing-sm);
+  border-radius: var(--radius-md);
   background-color: transparent;
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-normal);
 }
 
 .task-due-date-container:hover {
   background-color: rgba(83, 83, 83, 0.1);
-  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .task-due-date-container {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-xs) var(--spacing-xs);
+  }
+}
+
+@media (max-width: 600px) {
+  .task-due-date-container {
+    font-size: var(--font-size-xs);
+    min-width: 2.5rem;
+  }
 }

@@ -1,16 +1,17 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./TaskDescription.css";
 import type { BoardCard } from "../../../../types/BoardCard";
 import handleCardDescriptionChange from "../../../../utils/handleCardDescriptionChange";
+import { useResetOnCardChange } from "../../../../hooks/useResetOnCardChange";
 
 const TaskDescription = ({ card }: { card: BoardCard }) => {
   const [isFocused, setIsFocused] = useState(false);
   const [newDescription, setNewDescription] = useState(card.description);
 
-  useEffect(() => {
+  useResetOnCardChange(card, () => {
     setIsFocused(false);
     setNewDescription(card.description);
-  }, [card]);
+  });
 
   return (
     <textarea

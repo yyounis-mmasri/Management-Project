@@ -1,4 +1,4 @@
-import type { Subtask } from "./getInitialSubtasks";
+import type { Subtask } from "../../types/Subtask";
 
 /**
  * Adds a new subtask to the list if the text is not empty.

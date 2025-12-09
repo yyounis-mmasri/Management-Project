@@ -20,6 +20,7 @@ const CommentItem = ({ comment }: CommentItemProps) => {
           <span className="comment-timestamp">3 hours</span>
         </div>
         <p className="comment-content">
+          {/* Display first attachment as preview image if attachments exist */}
           {comment.attachments &&
             (comment.attachments.length == 0 ? null : (
               <img

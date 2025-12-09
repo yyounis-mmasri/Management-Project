@@ -1,5 +1,15 @@
 .task-reporter-container {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 1024px) {
+  .task-reporter-avatar {
+    width: var(--icon-lg);
+    height: var(--icon-lg);
+  }
+  .task-reporter-container {
+    gap: var(--spacing-sm);
+  }
 }
