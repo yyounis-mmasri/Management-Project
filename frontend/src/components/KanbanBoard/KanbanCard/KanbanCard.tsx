@@ -1,13 +1,7 @@
 import { assets } from "../../../assets/assets";
-import type { BoardCard } from "../../../types/BoardCard";
+import type { KanbanCardProps } from "../../../types/KanbanCard";
+import type { AssetKey } from "../../../types/AssetKey";
 import "./KanbanCard.css";
-
-type AssetKey = keyof typeof assets;
-
-interface KanbanCardProps {
-  card: BoardCard;
-  setSelectedCard: (card: BoardCard) => void;
-}
 
 const KanbanCard = ({ card, setSelectedCard }: KanbanCardProps) => {
   return (

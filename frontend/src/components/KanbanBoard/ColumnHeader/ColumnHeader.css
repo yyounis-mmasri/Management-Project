@@ -1,6 +1,6 @@
 .react-kanban-column-header {
   padding-bottom: 10px;
-  font-weight: bold;
+  font-weight: var(--font-bold);
 }
 .react-kanban-column-header input:focus {
   outline: none;
@@ -13,7 +13,7 @@
 
 .react-kanban-column-header__button {
   color: var(--text-black);
-  background-color: white;
+  background-color: var(--layout-bg-white);
   border-color: var(--border-color);
 }
 .react-kanban-column-header__button:hover,
@@ -35,37 +35,6 @@
   overflow-y: auto;
 }
 
-.kanban-add-column-button {
-  min-width: 15rem;
-  height: 3rem;
-  border: var(--border);
-  margin: 1rem;
-  border-radius: 1rem;
-  cursor: pointer;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-black);
-  font-size: 1rem;
-}
-.kanban-add-column-button:hover {
-  background-color: var(--kanban-add-column-hover-bg);
-}
-
-.kanban-new-column-input {
-  min-width: 15rem;
-  height: 3rem;
-  border: var(--border-gray);
-  margin: 1rem;
-  border-radius: 1rem;
-  padding: 0 1rem;
-}
-.kanban-new-column-input:focus {
-  outline: none;
-  border: 2px solid var(--kanban-input-focus-border-color);
-}
-
 .kanban-column-header {
   display: flex;
   justify-content: space-between;
@@ -74,62 +43,45 @@
 }
 
 .kanban-column-counter {
-  font-size: 0.75rem;
+  font-size: var(--font-size-md);
   min-width: 1.5rem;
   min-height: 1.5rem;
   color: var(--kanban-counter-text-color);
-  font-weight: 700;
+  font-weight: var(--font-bold);
   margin: 0 0.4rem 0 0;
-  padding: 0.2rem;
+  padding: var(--spacing-xs);
   align-items: center;
   display: flex;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: var(--radius-rounded);
   background-color: var(--kanban-counter-bg);
 }
 
 .kanban-action-buttons {
   display: flex;
   align-items: center;
-  gap: 0.2rem;
-}
-
-.kanban-add-card-button {
-  width: 2rem;
-  height: 2rem;
-  background-color: transparent;
-  cursor: pointer;
-  border: var(--border);
-  border-radius: 50%;
-  padding: 0.5rem;
-  display: flex;
-  font-weight: bold;
-  align-items: center;
-  justify-content: center;
-}
-
-.kanban-add-card-button:hover {
-  background-color: var(--bg-white-active);
-}
-
-.kanban-add-card-button img {
-  height: 1rem;
-  width: 1rem;
+  gap: var(--spacing-xs);
 }
 
 .kanban-new-card-input {
   border-radius: 0.8rem;
-  background-color: white;
+  background-color: var(--layout-bg-white);
   padding: 10px;
   margin-bottom: 7px;
   border: none;
   width: 100%;
   box-shadow: 0 1px 3px var(--kanban-card-shadow);
-  font-size: 1rem;
+  font-size: var(--font-size-4xl);
 }
 
 .six-dots {
   width: 1.5rem;
   height: 1.5rem;
   cursor: grab;
+}
+
+.kanban-column-title-container{
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
 }

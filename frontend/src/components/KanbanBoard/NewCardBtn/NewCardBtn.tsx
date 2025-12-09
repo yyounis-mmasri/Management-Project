@@ -1,9 +1,7 @@
 import handleInputFocus from "../../../utils/handleInputFocus";
 import { assets } from "../../../assets/assets";
-
-interface NewCardBtnProps {
-  setNewCard: (value: boolean) => void;
-}
+import type { NewCardBtnProps } from "../../../types/NewCardBtn";
+import "./NewCardBtn.css";
 
 const NewCardBtn = ({ setNewCard }: NewCardBtnProps) => {
   return (
@@ -14,7 +12,7 @@ const NewCardBtn = ({ setNewCard }: NewCardBtnProps) => {
         handleInputFocus({ selector: ".kanban-new-card-input" });
       }}
     >
-      <img src={assets.plusSign} alt="Add Card" />
+      <img src={assets.addCircle} alt="Add Card" />
     </button>
   );
 };

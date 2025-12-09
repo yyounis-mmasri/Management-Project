@@ -1,5 +1,4 @@
 .react-kanban-board {
-  padding: 0.3rem;
   min-height: 100%;
   min-width: 100%;
   height: fit-content;
@@ -8,11 +7,11 @@
 }
 
 .react-kanban-column {
-  padding: 1rem;
-  border-radius: 1rem;
+  padding: var(--spacing-xl);
+  border-radius: var(--spacing-xl);
   background-color: var(--kanban-column-bg);
-  margin: 1rem;
-  max-width: 20rem;
+  margin: var(--spacing-xl);
+  min-width: 19rem;
 }
 
 .react-kanban-column input:focus {

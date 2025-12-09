@@ -23,6 +23,7 @@ const ColumnHeader = ({ column, bag }: ColumnHeaderProps) => {
   return (
     <div className="kanban-column-header-container" ref={containerRef}>
       <div className="kanban-column-header">
+        <div className="kanban-column-title-container">
         <span className="kanban-column-counter">{column.cards.length}</span>
         <ColumnTitle
           column={column}
@@ -30,6 +31,7 @@ const ColumnHeader = ({ column, bag }: ColumnHeaderProps) => {
           isEditable={isEditable}
           setIsEditable={setIsEditable}
         />
+        </div>
         <div className="kanban-action-buttons">
           <NewCardBtn setNewCard={setNewCard} />
           <ColumnOptionsBtn
@@ -37,8 +39,8 @@ const ColumnHeader = ({ column, bag }: ColumnHeaderProps) => {
             bag={bag}
             setIsEditable={setIsEditable}
           />
+          <img src={assets.sixDots} alt="grap" className="six-dots" />
         </div>
-        <img src={assets.sixDots} alt="Options" className="six-dots" />
       </div>
       {newCard && (
         <input
