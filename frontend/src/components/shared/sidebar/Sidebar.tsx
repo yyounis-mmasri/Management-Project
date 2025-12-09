@@ -21,23 +21,28 @@ export const Sidebar = ({ isCollapsed, toggle }: SidebarProps) => {
   }, [isCollapsed]);
 
   return (
-    <div className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
-      <SidebarLogo />
-      <nav className="sidebar-overview">
-        <div
-          className="overview-header"
-          onClick={() => setIsOverviewOpen((prev) => !prev)}
-        >
-          <span className={`down-arrow ${!isOverviewOpen && "closed"}`}>
-            <img src={assets.downArrow} alt="V" className="image" />
-          </span>
-          <h2>Overview</h2>
-        </div>
-        <ul className={`overview-links ${!isOverviewOpen && "closed"}`}>
-          <SidebarLink linkName="Kanban" path="/kanban" />
-        </ul>
-      </nav>
-      <SidebarToggle isCollapsed={isCollapsed} toggle={toggle} />
-    </div>
+    <>
+      {!isCollapsed && (
+        <div className="sidebar-backdrop" onClick={toggle}></div>
+      )}
+      <div className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
+        <SidebarLogo />
+        <nav className="sidebar-overview">
+          <div
+            className="overview-header"
+            onClick={() => setIsOverviewOpen((prev) => !prev)}
+          >
+            <span className={`down-arrow ${!isOverviewOpen && "closed"}`}>
+              <img src={assets.downArrow} alt="V" className="image" />
+            </span>
+            <h2>Overview</h2>
+          </div>
+          <ul className={`overview-links ${!isOverviewOpen && "closed"}`}>
+            <SidebarLink linkName="Kanban" path="/kanban" />
+          </ul>
+        </nav>
+        <SidebarToggle isCollapsed={isCollapsed} toggle={toggle} />
+      </div>
+    </>
   );
 };

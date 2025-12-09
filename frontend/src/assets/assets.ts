@@ -32,6 +32,7 @@ import like from "./like.svg";
 import liked from "./liked.svg";
 import attachImg from "./attach-image.svg";
 import upload from "./upload.svg";
+import sidebarToggle from "./sidebar-toggle.svg";
 
 export const assets = {
   logo,
@@ -68,4 +69,5 @@ export const assets = {
   liked,
   attachImg,
   upload,
+  sidebarToggle,
 };

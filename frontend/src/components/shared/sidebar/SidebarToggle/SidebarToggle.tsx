@@ -1,5 +1,6 @@
 import "./SidebarToggle.css";
 import { assets } from "../../../../assets/assets";
+import Ripple from "../../Ripple/Ripple";
 
 interface SidebarToggleProps {
   isCollapsed: boolean;
@@ -8,18 +9,19 @@ interface SidebarToggleProps {
 
 const SidebarToggle = ({ isCollapsed, toggle }: SidebarToggleProps) => {
   return (
-    <button
-      onClick={toggle}
-      className={`sidebar__toggle ${isCollapsed ? "is-collapsed" : ""}`}
-      aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
-      aria-pressed={isCollapsed}
-    >
-      {isCollapsed ? (
-        <img src={assets.rightArrow} alt=">" />
-      ) : (
-        <img src={assets.leftArrow} alt="<" />
-      )}
-    </button>
+    <Ripple>
+      <button
+        onClick={toggle}
+        className={`sidebar__toggle ${isCollapsed ? "is-collapsed" : ""}`}
+        aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+        aria-pressed={isCollapsed}
+      >
+        <img
+          src={isCollapsed ? assets.rightArrow : assets.leftArrow}
+          alt={isCollapsed ? ">" : "<"}
+        />
+      </button>
+    </Ripple>
   );
 };
 

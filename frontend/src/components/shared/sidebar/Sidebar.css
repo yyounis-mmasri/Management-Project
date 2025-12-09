@@ -1,7 +1,7 @@
 .sidebar {
   min-height: 100%;
   width: var(--sidebar-width);
-  background-color: white;
+  background-color: var(--sidebar-bg);
   color: white;
   display: flex;
   flex-direction: column;
@@ -12,8 +12,8 @@
   z-index: 1201;
   overflow-y: auto;
   overflow-x: visible;
-  transition: width 0.3s ease;
-  border: 1px solid #ddd;
+  transition: width var(--transition-normal);
+  border: 1px solid var(--sidebar-border);
   gap: 1rem;
 }
 
@@ -30,14 +30,14 @@
 .overview-header {
   display: flex;
   align-items: center;
-  font-size: 0.6875rem;
+  font-size: var(--font-size-sm);
   line-height: 1.5;
-  font-weight: 700;
-  color: #555;
+  font-weight: var(--font-bold);
+  color: var(--layout-text-tertiary);
   cursor: pointer;
   margin-bottom: 10px;
   gap: 0;
-  transition: gap 0.3s ease;
+  transition: gap var(--transition-normal);
 }
 
 .down-arrow {
@@ -51,22 +51,23 @@
   height: 0.7rem;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity var(--transition-normal),
+    transform var(--transition-normal);
 }
 
 .overview-header:hover {
   gap: 0.3rem;
-  transition: gap 0.3s ease;
+  transition: gap var(--transition-normal);
 }
 
 .overview-header:hover .down-arrow img {
   opacity: 1;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-normal);
 }
 
 .down-arrow.closed img {
   transform: rotate(-90deg);
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-normal);
 }
 
 .overview-links {
@@ -89,4 +90,46 @@
 .sidebar.collapsed .overview-header,
 .sidebar.collapsed .sidebar-link span {
   display: none;
+}
+
+.sidebar-backdrop {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1299;
+    backdrop-filter: blur(2px);
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1300;
+    transition: transform var(--transition-normal);
+  }
+
+  .sidebar.collapsed {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 70vw;
+    padding: 15px;
+  }
+
+  .overview-header {
+    font-size: var(--font-size-2xs);
+  }
 }

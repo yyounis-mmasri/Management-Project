@@ -4,34 +4,64 @@
   gap: 0.5rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  position: relative;
 }
 
 .workspace-option:hover {
-  background-color: #f0f0f08c;
+  background-color: var(--layout-bg-gray-alpha);
 }
 
 .workspace-logo {
   width: 1.5rem;
   height: 1.5rem;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-sm);
 }
 
 .workspace-name {
-  font-size: 1rem;
-  color: #333;
+  font-size: var(--font-size-4xl);
+  color: var(--layout-text-secondary);
   width: 100%;
 }
 
 .workspace-access {
-  font-size: 0.7rem;
-  color: #1c252e;
+  font-size: var(--font-size-base);
+  color: var(--layout-text-primary);
   padding: 0.3rem;
-  background-color: #919eab29;
+  background-color: var(--layout-bg-gray-badge);
   border-radius: 0.3rem;
-  font-weight: 500;
+  font-weight: var(--font-medium);
 }
 
 .workspace-access.pro {
-  background-color: #00b8d929;
-  color: #006c9c;
+  background-color: var(--layout-accent-cyan);
+  color: var(--layout-accent-cyan-text);
+}
+
+@media (max-width: 1024px) {
+  .workspace-option {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .workspace-name {
+    font-size: var(--font-size-2xl);
+  }
+
+  .workspace-access {
+    font-size: var(--font-size-xs);
+  }
+}
+
+@media (max-width: 600px) {
+  .workspace-option {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .workspace-logo {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .workspace-name {
+    font-size: var(--font-size-lg);
+  }
 }

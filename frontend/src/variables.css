@@ -1,0 +1,225 @@
+:root {
+  /* Font Weights */
+  --font-thin: 100;
+  --font-extra-light: 200;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  --font-extra-bold: 800;
+  --font-black: 900;
+
+  /* Font Sizes */
+  --font-size-2xs: 0.625rem; /* 10px */
+  --font-size-xs: 0.65rem; /* 10.4px */
+  --font-size-sm: 0.6875rem; /* 11px */
+  --font-size-base: 0.7rem; /* 11.2px */
+  --font-size-md: 0.75rem; /* 12px */
+  --font-size-regular: 0.8rem; /* 12.8px */
+  --font-size-lg: 0.85rem; /* 13.6px */
+  --font-size-xl: 0.875rem; /* 14px */
+  --font-size-2xl: 0.9rem; /* 14.4px */
+  --font-size-3xl: 0.95rem; /* 15.2px */
+  --font-size-4xl: 1rem; /* 16px */
+  --font-size-5xl: 1.1rem; /* 17.6px */
+  --font-size-6xl: 1.25rem; /* 20px */
+  --font-size-7xl: 1.5rem; /* 24px */
+  --font-size-8xl: 2rem; /* 32px */
+
+  /* Layout Dimensions */
+  --sidebar-width: 18rem;
+  --sidebar-collapsed-width: 5.5rem;
+  --navbar-height: 4rem;
+  --kanban-header-height: 4rem;
+  --text-black: #1c252e;
+
+  --font-red-color: #b71d18;
+  --bg-red-color: #ff563029;
+  --bg-red-hover-color: #ff56304d;
+
+  --border: 1px solid #ccc;
+  --border-color: #ccc;
+
+  --white-active: #e6e6e6;
+
+  --bg-gray: #f0f0f0;
+  --bg-gray-hover: #e0e0e0;
+  --bg-white-active: #ccc;
+
+  --border-gray: 1px solid #ccc;
+  --border-gray-active: #bdbdbd;
+
+  --comment-bar-height: 8.375rem;
+
+  /* Kanban component-specific variables */
+  --kanban-dashed-border-color: #eee;
+  --kanban-add-column-hover-bg: #f0f0f08c;
+  --kanban-input-focus-border-color: #999;
+  --kanban-counter-text-color: #555;
+  --kanban-counter-bg: #4949492a;
+
+  /* Kanban colors */
+  --kanban-border-color: #ccc;
+  --kanban-blue: #007bff;
+  --kanban-blue-hover: rgba(0, 86, 179, 0.1);
+  --kanban-green: #28a745;
+  --kanban-green-hover: rgba(40, 167, 69, 0.1);
+  --kanban-black: #1c252e;
+  --kanban-black-hover: rgba(28, 37, 46, 0.1);
+  --kanban-column-bg: #f4f6f8;
+  --kanban-card-bg: #fff;
+  --kanban-card-shadow: rgba(0, 0, 0, 0.1);
+  --kanban-card-dragging-shadow: grey;
+  --kanban-scrollbar-thumb: #bdbdbd;
+  --kanban-scrollbar-track: #f5f5f5;
+  --kanban-text-primary: #1c252e;
+  --kanban-text-secondary: #555;
+  --kanban-text-tertiary: #333;
+  --kanban-border-light: #eee;
+  --kanban-border-medium: #ddd;
+  --kanban-border-dark: #ccc;
+  --kanban-bg-hover: #f0f0f08c;
+  --kanban-bg-hover-solid: #f0f0f0;
+  --kanban-bg-hover-dark: #e0e0e0;
+  --kanban-bg-active: #ccc;
+  --kanban-taskbar-bg: rgba(255, 255, 255, 0.7);
+  --kanban-taskbar-shadow-light: rgba(0, 0, 0, 0.082);
+  --kanban-taskbar-shadow-dark: rgba(0, 0, 0, 0.2);
+  --kanban-dialog-bg: #fff;
+  --kanban-dialog-shadow: rgba(0, 0, 0, 0.1);
+  --kanban-dialog-backdrop: rgba(0, 0, 0, 0.4);
+  --kanban-action-hover: #dddddd36;
+  --kanban-like-hover: #0084ff2d;
+  --kanban-delete-bg: #ff5630;
+  --kanban-delete-hover: #a33820;
+  --kanban-delete-shadow: rgba(224, 67, 69, 0.4);
+  --kanban-assignee-more-bg: #91ffff4f;
+  --kanban-status-dropdown-shadow: rgba(0, 0, 0, 0.1);
+  --kanban-tab-bg: #f0f0f0;
+  --kanban-tab-active-shadow: rgba(0, 0, 0, 0.1);
+  --kanban-apply-button-bg: #3d3d3d;
+  --kanban-apply-button-hover: #262626;
+  --kanban-priority-button: 1px solid #ccc;
+  --kanban-priority-button-active: 2px solid #000000;
+  --kanban-input-border-color: #ccc;
+
+  /* Shared Layout Variables */
+  /* Colors */
+  --layout-text-primary: #1c252e;
+  --layout-text-secondary: #333;
+  --layout-text-tertiary: #555;
+  --layout-text-gray: #7c7c7c;
+  --layout-text-email: rgb(88, 88, 88);
+  --layout-text-workspace: #272727;
+
+  --layout-bg-white: #ffffff;
+  --layout-bg-gray-light: #f3f3f3;
+  --layout-bg-gray: #f0f0f0;
+  --layout-bg-gray-hover: #e0e0e0;
+  --layout-bg-gray-subtle: #f5f5f5;
+  --layout-bg-gray-alpha: #f0f0f08c;
+  --layout-bg-gray-medium: #d3d3d3;
+  --layout-bg-gray-badge: #919eab29;
+
+  --layout-border-light: #ddd;
+  --layout-border-medium: #ccc;
+  --layout-border-gray: #d3d3d3;
+  --layout-border-dashed: #a9a9a9;
+  --layout-border-divider: rgba(145, 158, 171, 0.2);
+
+  --layout-shadow-light: rgba(0, 0, 0, 0.082);
+  --layout-shadow-medium: rgba(0, 0, 0, 0.1);
+  --layout-shadow-dark: rgba(0, 0, 0, 0.22);
+
+  --layout-backdrop-alpha: rgba(0, 0, 0, 0.1);
+  --layout-bubble-click: rgba(0, 0, 0, 0.1);
+
+  --layout-accent-blue: #25baff;
+  --layout-accent-cyan: #00b8d929;
+  --layout-accent-cyan-text: #006c9c;
+  --layout-accent-orange: #ffab00;
+
+  /* Navbar specific */
+  --navbar-bg: rgba(255, 255, 255, 0.575);
+  --navbar-blur: blur(8px);
+
+  /* Profile sidebar */
+  --profile-sidebar-bg: rgba(255, 255, 255, 0.9);
+
+  /* Gradients */
+  --workspace-dropdown-gradient: linear-gradient(
+    to bottom left,
+    rgba(246, 252, 255, 0.99) 0%,
+    rgba(255, 255, 255, 0.99) 40%,
+    rgba(255, 255, 255, 0.99) 60%,
+    rgba(255, 246, 252, 0.99) 100%
+  );
+  --profile-content-gradient: linear-gradient(
+    to bottom left,
+    hsla(197, 100%, 50%, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 40%,
+    rgba(255, 255, 255, 0.2) 60%,
+    hsla(317, 88%, 87%, 0.2) 100%
+  );
+  --profile-logout-gradient: linear-gradient(
+    to bottom left,
+    #ffffff 0%,
+    hsla(317, 88%, 87%, 0.2) 50%
+  );
+  --profile-discount-outline-gradient: linear-gradient(
+    to bottom right,
+    #ff7139,
+    #9900ff
+  );
+  --profile-discount-cover-gradient: linear-gradient(
+    to bottom right,
+    #ff7139ce,
+    #9900ffce
+  );
+
+  /* Sidebar */
+  --sidebar-bg: #ffffff;
+  --sidebar-border: #ddd;
+  --sidebar-link-active-bg: rgba(87, 201, 87, 0.171);
+
+  /* Profile sidebar */
+  --profile-sidebar-width: 20rem;
+  --profile-logout-height: 5rem;
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 12px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.4s ease-out;
+
+  /* Animations */
+  --spin-duration: 5s;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

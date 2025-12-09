@@ -4,11 +4,20 @@ import SearchBar from "./SearchBar/SearchBar";
 import NavItem from "./NavItem/NavItem";
 import Profile from "./Profile/Profile";
 import navItems from "./utils/navItems";
+import "./Navbar.css";
+import SidebarToggleButton from "./SidebarToggleButton/SidebarToggleButton";
 
-export const Navbar = () => {
+interface NavbarProps {
+  isCollapsed: boolean;
+  toggle: () => void;
+}
+
+export const Navbar = ({ isCollapsed, toggle }: NavbarProps) => {
   return (
     <header className="navbar">
       <div className="navbar-left">
+        {/* Sidebar toggle button - Visible for smaller screens only */}
+        <SidebarToggleButton isCollapsed={isCollapsed} toggle={toggle} />
         <WorkspaceSelector />
       </div>
       <div className="navbar-right">

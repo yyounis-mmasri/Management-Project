@@ -21,3 +21,18 @@
   height: 100%;
   overflow-y: auto;
 }
+
+@media (max-width: 1024px) {
+  .layout {
+    min-height: 100vh;
+    max-width: 100vw;
+  }
+
+  .layout-main {
+    padding-left: 0;
+  }
+
+  .layout-main.expanded {
+    padding-left: 0;
+  }
+}

@@ -7,6 +7,7 @@ import LogoutButton from "./LogoutButton/LogoutButton";
 import ProfileSwitch from "./ProfileSwitch/ProfileSwitch";
 import ProfileIcon from "./ProfileIcon/ProfileIcon";
 import DiscountCover from "./DiscountCover/DiscountCover";
+import { currentUser } from "../../../../../utils/currentUser";
 
 interface ProfileSidebarProps {
   show: boolean;
@@ -14,8 +15,7 @@ interface ProfileSidebarProps {
 }
 
 const ProfileSidebar = ({ show, onClose }: ProfileSidebarProps) => {
-  const currentUserId = 1;
-  const user = users.find((u) => u.id === currentUserId);
+  const user = users.find((u) => u.id === currentUser?.id);
   if (!user) return null;
   return (
     <div
@@ -31,11 +31,13 @@ const ProfileSidebar = ({ show, onClose }: ProfileSidebarProps) => {
             <img src={assets.cancel} alt="Close" />
           </button>
 
+          {/* Profile information */}
           <div className="profile__container">
             <ProfileIcon user={user} />
-            <ProfileSwitch currentUserId={currentUserId} />
+            <ProfileSwitch />
           </div>
 
+          {/* Navigation items */}
           <div className="profile-sidebar__navs">
             {navItems.map((item) => (
               <ProfileNav

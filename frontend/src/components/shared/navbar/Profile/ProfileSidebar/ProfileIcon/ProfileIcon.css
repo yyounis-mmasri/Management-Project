@@ -3,7 +3,7 @@
   height: 5rem;
   border-radius: 50%;
   object-fit: cover;
-  outline: 3px solid #25baff;
+  outline: 3px solid var(--layout-accent-blue);
   outline-offset: 2px;
   margin: 5px;
 }
@@ -15,14 +15,44 @@
 }
 
 .profile__name {
-  font-size: 1rem;
-  color: #1c252e;
-  font-weight: 600;
+  font-size: var(--font-size-4xl);
+  color: var(--layout-text-primary);
+  font-weight: var(--font-semi-bold);
 }
 
 .profile__email {
-  font-size: 0.875rem;
+  font-size: var(--font-size-xl);
   word-wrap: break-word;
-  color: rgb(88, 88, 88);
-  font-weight: 400;
+  color: var(--layout-text-email);
+  font-weight: var(--font-regular);
+}
+
+@media (max-width: 1024px) {
+  .profile__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .profile__name {
+    font-size: var(--font-size-3xl);
+  }
+
+  .profile__email {
+    font-size: var(--font-size-regular);
+  }
+}
+
+@media (max-width: 600px) {
+  .profile__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .profile__name {
+    font-size: var(--font-size-2xl);
+  }
+
+  .profile__email {
+    font-size: var(--font-size-md);
+  }
 }

@@ -1,4 +1,5 @@
 import "./NavItem.css";
+import Ripple from "../../Ripple/Ripple";
 
 interface NavItemProps {
   icon: string;
@@ -12,9 +13,11 @@ const NavItem = ({
   spin = false,
 }: NavItemProps) => {
   return (
-    <button className={`nav-item ${spin ? "spin" : ""}`}>
-      <img src={icon} alt={alt} />
-    </button>
+    <Ripple>
+      <button className={`nav-item ${spin ? "spin" : ""}`}>
+        <img src={icon} alt={alt} />
+      </button>
+    </Ripple>
   );
 };
 

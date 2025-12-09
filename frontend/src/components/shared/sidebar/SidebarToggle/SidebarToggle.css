@@ -1,9 +1,9 @@
 .sidebar .sidebar__toggle {
-  width: 2rem;
-  height: 2rem;
-  background-color: white;
-  border: 1px solid #ccc;
-  font-size: 2rem;
+  width: 26px;
+  height: 26px;
+  background-color: var(--layout-bg-white);
+  border: 1px solid var(--layout-border-medium);
+  font-size: var(--font-size-8xl);
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -14,7 +14,15 @@
   left: calc(var(--sidebar-width) - 1rem);
   transform: none;
   z-index: 1300;
-  transition: left 0.3s ease;
+  transition: left var(--transition-normal);
+}
+
+.sidebar__toggle:hover {
+  background-color: var(--layout-bg-gray);
+}
+
+.sidebar__toggle:active {
+  transform: scale(0.95);
 }
 
 .sidebar__toggle img {
@@ -24,5 +32,17 @@
 
 .sidebar.collapsed .sidebar__toggle {
   left: calc(var(--sidebar-collapsed-width) - 1rem);
-  transition: left 0.3s ease;
+  transition: left var(--transition-normal);
+}
+
+@media (max-width: 1024px) {
+  .sidebar .sidebar__toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar .sidebar__toggle {
+    display: none;
+  }
 }

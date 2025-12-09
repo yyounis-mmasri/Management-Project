@@ -1,18 +1,16 @@
-
-
 .profile-sidebar__discounts-cover__outline {
   padding: 0.25rem;
   width: 100%;
-  border-radius: 0.5rem;
-  background: linear-gradient(to bottom right, #ff7139, #9900ff);
+  border-radius: var(--radius-md);
+  background: var(--profile-discount-outline-gradient);
 }
 
 .profile-sidebar__discounts-cover {
   display: flex;
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-md);
   overflow: hidden;
-  background: linear-gradient(to bottom right, #ff7139ce, #9900ffce);
+  background: var(--profile-discount-cover-gradient);
   opacity: 0.9;
   justify-content: flex-end;
   position: relative;
@@ -24,26 +22,28 @@
 }
 
 .profile-sidebar__discounts__text h3 {
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-semi-bold);
   color: white;
 }
 
 .profile-sidebar__discounts__text p {
-  font-size: 0.75rem;
-  font-weight: 400;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-regular);
   margin: 0.25rem 0 1rem;
   color: white;
 }
 
 .profile-sidebar__discounts__text button {
   padding: 0.25rem 0.5rem;
-  font-size: 0.7rem;
-  font-weight: 600;
-  background-color: #ffab00;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-semi-bold);
+  background-color: var(--layout-accent-orange);
   border: none;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-md);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .profile-sidebar__discounts__img {
@@ -55,9 +55,49 @@
 
 @keyframes animateRocket {
   0% {
-    transform: translateY(10px); /* starting position */
+    transform: translateY(10px);
   }
   100% {
-    transform: translateY(30px); /* moves 20px up */
+    transform: translateY(30px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .profile-sidebar__discounts__text h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  .profile-sidebar__discounts__text p {
+    font-size: var(--font-size-base);
+  }
+
+  .profile-sidebar__discounts__img {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-sidebar__discounts__text {
+    padding: 0.75rem;
+  }
+
+  .profile-sidebar__discounts__text h3 {
+    font-size: var(--font-size-regular);
+  }
+
+  .profile-sidebar__discounts__text p {
+    font-size: var(--font-size-xs);
+    margin: 0.2rem 0 0.75rem;
+  }
+
+  .profile-sidebar__discounts__text button {
+    padding: 0.2rem 0.4rem;
+    font-size: var(--font-size-xs);
+  }
+
+  .profile-sidebar__discounts__img {
+    width: 4rem;
+    height: 4rem;
   }
 }

@@ -6,13 +6,14 @@
   height: 2.5rem;
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--transition-fast);
   background-color: transparent;
   border: none;
+  position: relative;
 }
 
 .nav-item:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--layout-backdrop-alpha);
 }
 
 .nav-item img {
@@ -29,4 +30,28 @@
 .spin {
   animation: spin var(--spin-duration, 5s) linear infinite;
   will-change: transform;
+}
+
+@media (max-width: 1024px) {
+  .nav-item {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .nav-item img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-item {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .nav-item img {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
 }
