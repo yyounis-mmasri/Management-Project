@@ -1,4 +1,4 @@
-@import '../../../styles/auth-variables.css';
+@import "../../../../styles/auth-variables.css";
 
 @keyframes slideIn {
   from {
@@ -68,7 +68,7 @@
     padding: var(--auth-space-sm) var(--auth-space-md);
     font-size: var(--auth-font-sm);
   }
-  
+
   .auth-message-icon {
     font-size: var(--auth-font-base);
   }

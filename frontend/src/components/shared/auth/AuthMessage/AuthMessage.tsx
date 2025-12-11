@@ -1,9 +1,9 @@
-import { type FC, type ReactNode } from 'react';
-import { AUTH_MESSAGE_ICONS } from '../../../constants/authMessageIcons';
-import './AuthMessage.css';
+import { type FC, type ReactNode } from "react";
+import { AUTH_MESSAGE_ICONS } from "../../../../constants/authMessageIcons";
+import "./AuthMessage.css";
 
 interface AuthMessageProps {
-  type: 'error' | 'success' | 'info' | 'warning';
+  type: "error" | "success" | "info" | "warning";
   children: ReactNode;
 }
 

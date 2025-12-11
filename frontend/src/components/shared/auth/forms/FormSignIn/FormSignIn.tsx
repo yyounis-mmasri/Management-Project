@@ -1,7 +1,10 @@
-import { type FC } from 'react';
-import type { SignInFormProps } from '../../../types/auth';
-import { AuthInput, AuthButton, AuthMessage, AuthLink } from '../../../components/shared';
-import './SignIn.css';
+import { type FC } from "react";
+import type { SignInFormProps } from "../../../../../types/auth";
+import "./FormSignIn.css";
+import AuthInput from "../../AuthInput/AuthInput";
+import AuthLink from "../../AuthLink/AuthLink";
+import AuthMessage from "../../AuthMessage/AuthMessage";
+import AuthButton from "../../AuthButton/AuthButton";
 
 const FormSignIn: FC<SignInFormProps> = ({
   email,
@@ -36,7 +39,7 @@ const FormSignIn: FC<SignInFormProps> = ({
         </div>
         <div className="password-input-wrapper">
           <input
-            type={showPassword ? 'text' : 'password'}
+            type={showPassword ? "text" : "password"}
             id="password"
             className="form-input"
             value={password}
@@ -50,7 +53,7 @@ const FormSignIn: FC<SignInFormProps> = ({
             onClick={onToggleShow}
             aria-label="Toggle password visibility"
           >
-            {showPassword ? '👁️' : '🔒'}
+            {showPassword ? "👁️" : "🔒"}
           </button>
         </div>
       </div>

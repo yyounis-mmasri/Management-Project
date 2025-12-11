@@ -1,4 +1,4 @@
-@import '../../../styles/auth-variables.css';
+@import "../../../../styles/auth-variables.css";
 
 .auth-input-group {
   display: flex;
@@ -23,9 +23,8 @@
   font-size: 15px;
   color: #1a1a1a;
   background: white;
-  transition: border-color 0.2s ease,
-              background-color 0.2s ease,
-              box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease,
+    box-shadow 0.2s ease;
   font-family: inherit;
   box-sizing: border-box;
   min-width: 0;
@@ -77,7 +76,7 @@
   .auth-input {
     font-size: var(--auth-font-base);
   }
-  
+
   .auth-input-label {
     font-size: var(--auth-font-sm);
   }
@@ -90,11 +89,11 @@
     font-size: var(--auth-font-base);
     min-height: var(--auth-input-height);
   }
-  
+
   .auth-input-label {
     font-size: var(--auth-font-sm);
   }
-  
+
   .auth-input-error-text {
     font-size: var(--auth-font-xs);
   }

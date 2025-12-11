@@ -1,4 +1,4 @@
-@import '../../../styles/auth-variables.css';
+@import "../../../../styles/auth-variables.css";
 
 .auth-button {
   padding: var(--auth-space-lg) var(--auth-space-2xl);
@@ -8,8 +8,8 @@
   font-weight: var(--auth-font-semibold);
   cursor: pointer;
   transition: background-color var(--auth-transition-slow),
-              box-shadow var(--auth-transition-slow),
-              transform var(--auth-transition-slow);
+    box-shadow var(--auth-transition-slow),
+    transform var(--auth-transition-slow);
   margin-top: var(--auth-space-sm);
   font-family: inherit;
   letter-spacing: 0.3px;
@@ -29,7 +29,7 @@
 }
 
 .auth-button-primary::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -104,11 +104,11 @@
     min-height: var(--auth-button-height);
     letter-spacing: 0.5px;
   }
-  
+
   .auth-button:hover {
     transform: none; /* Disable hover lift on mobile */
   }
-  
+
   .auth-button:active {
     transform: scale(0.98);
   }
