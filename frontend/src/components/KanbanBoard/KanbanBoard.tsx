@@ -59,6 +59,7 @@ const KanbanBoard = () => {
         renderCard={(card) => (
           <KanbanCard
             card={card}
+            selectedCard={selectedCard ?? undefined}
             setSelectedCard={(selectedCard) =>
               handleCardSelect({
                 selectedCard,

@@ -2,16 +2,21 @@
   min-height: 100%;
   min-width: 100%;
   height: fit-content;
-  scrollbar-width: auto;
-  scrollbar-color: var(--kanban-scrollbar-thumb) var(--kanban-scrollbar-track);
+  padding: 5px 5px 0 5px !important;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.react-kanban-board::-webkit-scrollbar {
+  display: none;
 }
 
 .react-kanban-column {
   padding: var(--spacing-xl);
   border-radius: var(--spacing-xl);
   background-color: var(--kanban-column-bg);
-  margin: var(--spacing-xl);
-  min-width: 19rem;
+  margin: 0.5rem;
+  min-width: 18rem;
 }
 
 .react-kanban-column input:focus {

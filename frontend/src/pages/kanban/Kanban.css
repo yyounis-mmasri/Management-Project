@@ -26,7 +26,7 @@
   padding-top: 0.5rem;
 }
 
-.kanban-title{
+.kanban-title {
   font-family: "Public Sans", sans-serif;
   font-size: var(--font-size-7xl);
   font-weight: var(--font-bold);
@@ -48,7 +48,14 @@
   height: calc(
     100vh - (var(--navbar-height) + var(--kanban-header-height) + 1rem)
   );
-  overflow-x: scroll;
+  overflow-x: visible;
   margin-top: var(--kanban-header-height);
   padding-top: 1rem;
+  padding-bottom: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.kanban-content::-webkit-scrollbar {
+  display: none;
 }

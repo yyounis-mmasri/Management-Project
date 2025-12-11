@@ -60,7 +60,6 @@
 .kanban-action-buttons {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xs);
 }
 
 .kanban-new-card-input {
@@ -80,7 +79,7 @@
   cursor: grab;
 }
 
-.kanban-column-title-container{
+.kanban-column-title-container {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);

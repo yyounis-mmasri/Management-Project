@@ -15,9 +15,8 @@ const TaskPriority = ({ card }: TaskPriorityProps) => {
   return (
     <div className="task-priority-container">
       {priorities.map((priority) => (
-        <Ripple>
+        <Ripple key={priority.value}>
           <button
-            key={priority.value}
             className={`task-priority-button ${
               activePriority === priority.value ? "active" : ""
             }`}

@@ -1,27 +1,25 @@
-.kanban-column-title {
-  font-size: var(--font-size-6xl);
-  font-weight: var(--font-semi-bold);
-  color: var(--text-black);
-  width: fit-content;
-  max-width: 10rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 100%;
-}
-
 .kanban-column-title-input {
   font-size: var(--font-size-6xl);
   font-weight: var(--font-semi-bold);
   color: var(--text-black);
-  width: fit-content;
-  max-width: 8rem;
-  border: none;
-  justify-self: flex-start;
+  width: 100%;
+  max-width: 10rem;
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xs) 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 100%;
-  border-radius: var(--radius-md);
-  padding: var(--spacing-xs) var(--spacing-md);
+  transition: border-color var(--transition-fast),
+    padding var(--transition-fast);
+  cursor: text;
+  background-color: transparent;
+}
+
+.kanban-column-title-input:focus,
+.kanban-column-title-input.editable {
+  outline: none;
+  border-color: var(--kanban-input-focus-border-color);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  cursor: text;
 }
