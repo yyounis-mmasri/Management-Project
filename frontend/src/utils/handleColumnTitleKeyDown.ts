@@ -26,10 +26,16 @@ const createColumnTitleKeyDownHandler = ({
           if (next && next !== column.title) {
             bag.renameColumn(next);
           }
+          inputRef.current.blur();
         }
         setIsEditable(false);
       },
-      onEscape: () => setIsEditable(false),
+      onEscape: () => {
+        if (inputRef.current) {
+          inputRef.current.blur();
+        }
+        setIsEditable(false);
+      },
     });
   };
 };

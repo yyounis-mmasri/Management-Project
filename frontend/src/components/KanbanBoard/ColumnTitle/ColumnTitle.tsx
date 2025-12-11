@@ -14,7 +14,9 @@ const ColumnTitle = ({
   return (
     <input
       type="text"
-      className={`kanban-column-title-input ${isEditable ? "editable" : ""}`}
+      className={`kanban-column-title-input kanban-column-title-input-${
+        column.id
+      } ${isEditable ? "editable" : ""}`}
       defaultValue={column.title}
       onFocus={() => setIsEditable(true)}
       onBlur={() => setIsEditable(false)}
