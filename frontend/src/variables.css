@@ -146,7 +146,7 @@
   --navbar-blur: blur(8px);
 
   /* Profile sidebar */
-  --profile-sidebar-bg: rgba(255, 255, 255, 0.9);
+  --profile-sidebar-bg: rgba(255, 255, 255, 1);
 
   /* Gradients */
   --workspace-dropdown-gradient: linear-gradient(
