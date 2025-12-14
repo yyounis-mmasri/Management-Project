@@ -2,6 +2,7 @@ import type { BoardColumn } from "../types/BoardColumn";
 import type { BoardCard } from "../types/BoardCard";
 import type { User } from "../types/User";
 import { Priority } from "../types/Priority";
+import { currentUser } from "./currentUser";
 
 interface HandleCardNewArgs {
   e: React.KeyboardEvent<HTMLInputElement>;
@@ -23,8 +24,9 @@ const handleCardNew = ({
   if (e.key === "Enter") {
     const title = e.currentTarget.value.trim();
     if (!title) return setNewCard(false);
+
     const resolvedReporter: User = reporter ??
-      column.cards[0]?.reporter ?? {
+      currentUser ?? {
         id: 0,
         name: "",
         username: "",
@@ -33,14 +35,19 @@ const handleCardNew = ({
         address: { city: "", street: "", zipcode: "" },
         avatar: "",
       };
+
+    const now = new Date();
+    const nextWeek = new Date(now);
+    nextWeek.setDate(now.getDate() + 7);
+
     bag.addCard({
       columnId: column.id,
       id: Date.now(),
       title,
       reporter: resolvedReporter,
       taskLabels: [],
-      startDate: "",
-      dueDate: "",
+      startDate: now.toISOString(),
+      dueDate: nextWeek.toISOString(),
       priority: Priority.Low,
       description: "",
       attachments: [],

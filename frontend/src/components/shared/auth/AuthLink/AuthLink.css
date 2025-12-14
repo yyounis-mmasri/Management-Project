@@ -1,0 +1,37 @@
+@import "../../../../styles/auth-variables.css";
+
+.auth-link {
+  color: var(--auth-primary-color);
+  text-decoration: none;
+  font-weight: var(--auth-font-semibold);
+  transition: color var(--auth-transition-base),
+    transform var(--auth-transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--auth-space-xs);
+}
+
+.auth-link:hover {
+  color: var(--auth-primary-hover);
+}
+
+/* Primary variant */
+.auth-link-primary {
+  font-size: inherit;
+}
+
+.auth-link-primary:hover {
+  transform: translateX(2px);
+}
+
+/* Secondary variant (for "forgot password" etc.) */
+.auth-link-secondary {
+  font-size: var(--auth-font-sm);
+  color: var(--auth-text-secondary);
+  font-weight: var(--auth-font-medium);
+}
+
+.auth-link-secondary:hover {
+  color: var(--auth-primary-color);
+  text-decoration: underline;
+}

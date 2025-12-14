@@ -1,0 +1,23 @@
+.kanban-add-card-button {
+  width: 1.9rem;
+  height: 1.9rem;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-rounded);
+  padding: 0.3125rem;
+  display: flex;
+  font-weight: var(--font-bold);
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.kanban-add-card-button:hover {
+  background-color: var(--bg-white-active);
+}
+
+.kanban-add-card-button img {
+  height: var(--icon-sm);
+  width: var(--icon-sm);
+}

@@ -1,9 +1,9 @@
 import React from "react";
 import type { BoardCard } from "../../../types/BoardCard";
 import type { TabType } from "../../../types/TabType";
-import TaskOverview from "../TaskOverview/TaskOverview.tsx";
-import TaskSubtasks from "../TaskSubtasks/TaskSubtasks.tsx";
-import TaskComments from "../TaskComments/TaskComments.tsx";
+import TaskOverview from "./TaskOverview/TaskOverview";
+import TaskSubtasks from "./TaskSubtasks/TaskSubtasks";
+import TaskComments from "./TaskComments/TaskComments";
 
 interface TabComponentsProps {
   selectedCard: BoardCard;

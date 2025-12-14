@@ -1,0 +1,77 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../../../../context/AuthContext";
+import { createSignUpHandler } from "../../../../../utils/auth";
+import handleChange from "../../../../../utils/handleChange";
+import type { SignUpFormData, FormErrors } from "../../../../../types/auth";
+import "../../../../../pages/auth/signup/SignUp.css";
+import AuthInput from "../../AuthInput/AuthInput";
+import AuthMessage from "../../AuthMessage/AuthMessage";
+import PasswordInput from "../../PasswordInput/PasswordInput";
+import AuthButton from "../../AuthButton/AuthButton";
+
+export default function SignUpForm() {
+  const [formData, setFormData] = useState<SignUpFormData>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
+  const [errors, setErrors] = useState<FormErrors>({});
+
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSubmit = createSignUpHandler(login, navigate, setErrors);
+
+  return (
+    <form onSubmit={(e) => handleSubmit(e, formData)} className="auth-form">
+      {Object.keys(errors).length > 0 && (
+        <AuthMessage type="error">{Object.values(errors)[0]}</AuthMessage>
+      )}
+      <div className="form-row">
+        <AuthInput
+          type="text"
+          id="firstName"
+          name="firstName"
+          label="First name"
+          value={formData.firstName}
+          onChange={(e) => handleChange(e, setFormData)}
+          required
+        />
+
+        <AuthInput
+          type="text"
+          id="lastName"
+          name="lastName"
+          label="Last name"
+          value={formData.lastName}
+          onChange={(e) => handleChange(e, setFormData)}
+          required
+        />
+      </div>
+
+      <AuthInput
+        type="email"
+        id="email"
+        name="email"
+        label="Email address"
+        value={formData.email}
+        onChange={(e) => handleChange(e, setFormData)}
+        required
+      />
+
+      <PasswordInput
+        id="password"
+        name="password"
+        label="Password"
+        placeholder="6+ characters"
+        value={formData.password}
+        onChange={(e) => handleChange(e, setFormData)}
+        required
+      />
+
+      <AuthButton type="submit">Create account</AuthButton>
+    </form>
+  );
+}

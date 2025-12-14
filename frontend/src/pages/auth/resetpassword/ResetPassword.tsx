@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import AuthLayout from "../../../components/AuthLayout/AuthLayout";
-import { AUTH_CONSTANTS, createResetPasswordHandler } from "../../../utils/auth";
-import { AuthInput, AuthButton, AuthMessage, AuthLink } from "../../../components/shared";
+import {
+  AUTH_CONSTANTS,
+  createResetPasswordHandler,
+} from "../../../utils/auth";
 import "./ResetPassword.css";
+import {
+  AuthInput,
+  AuthButton,
+  AuthMessage,
+  AuthLink,
+} from "../../../components/shared/auth";
 
 const ResetPassword: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
 
   const handleSubmit = createResetPasswordHandler(setError, setSuccess);
@@ -42,7 +50,7 @@ const ResetPassword: React.FC = () => {
 
           {/* Error message */}
           {error && <AuthMessage type="error">{error}</AuthMessage>}
-          
+
           {/* Success message */}
           {success && (
             <AuthMessage type="success">

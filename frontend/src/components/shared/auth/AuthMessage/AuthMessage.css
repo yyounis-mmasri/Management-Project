@@ -1,0 +1,83 @@
+@import "../../../../styles/auth-variables.css";
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.auth-message {
+  padding: var(--auth-space-md) var(--auth-space-lg);
+  border-radius: var(--auth-radius-lg);
+  font-size: var(--auth-font-base);
+  display: flex;
+  align-items: center;
+  gap: var(--auth-space-sm);
+  white-space: nowrap;
+  line-height: var(--auth-line-height-normal);
+  animation: slideIn 0.3s ease-out;
+}
+
+.auth-message-icon {
+  flex-shrink: 0;
+  font-size: var(--auth-font-lg);
+}
+
+.auth-message-text {
+  flex: 1;
+}
+
+/* Error variant */
+.auth-message-error {
+  background: var(--auth-error-bg);
+  border: 1px solid var(--auth-error-border);
+  color: var(--auth-error-text);
+}
+
+/* Success variant */
+.auth-message-success {
+  background: var(--auth-success-bg);
+  border: 1px solid var(--auth-success-border);
+  color: var(--auth-success-text);
+}
+
+/* Info variant */
+.auth-message-info {
+  background: var(--auth-info-bg);
+  border: 1px solid var(--auth-info-border);
+  color: var(--auth-info-text);
+}
+
+/* Warning variant */
+.auth-message-warning {
+  background: var(--auth-warning-bg);
+  border: 1px solid var(--auth-warning-border);
+  color: var(--auth-warning-text);
+}
+
+/* ========== Responsive Styles ========== */
+
+/* Mobile */
+@media (max-width: 600px) {
+  .auth-message {
+    padding: var(--auth-space-sm) var(--auth-space-md);
+    font-size: var(--auth-font-sm);
+  }
+
+  .auth-message-icon {
+    font-size: var(--auth-font-base);
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 479px) {
+  .auth-message {
+    padding: var(--auth-space-sm);
+    font-size: var(--auth-font-xs);
+  }
+}

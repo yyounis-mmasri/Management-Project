@@ -31,7 +31,7 @@
   --sidebar-width: 18rem;
   --sidebar-collapsed-width: 5.5rem;
   --navbar-height: 4rem;
-  --kanban-header-height: 4rem;
+  --kanban-header-height: 2.4rem;
   --text-black: #1c252e;
 
   --font-red-color: #b71d18;
@@ -236,7 +236,7 @@
 
 ::-webkit-scrollbar {
   width: 0px;
-  height: 1rem;
+  height: 0.75rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -246,4 +246,25 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@media (max-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0.25rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: #888;
+  }
 }

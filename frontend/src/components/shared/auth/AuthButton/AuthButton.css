@@ -1,0 +1,123 @@
+@import "../../../../styles/auth-variables.css";
+
+.auth-button {
+  padding: var(--auth-space-lg) var(--auth-space-2xl);
+  border: none;
+  border-radius: var(--auth-radius-lg);
+  font-size: var(--auth-font-base);
+  font-weight: var(--auth-font-semibold);
+  cursor: pointer;
+  transition: background-color var(--auth-transition-slow),
+    box-shadow var(--auth-transition-slow),
+    transform var(--auth-transition-slow);
+  margin-top: var(--auth-space-sm);
+  font-family: inherit;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-button-full {
+  width: 100%;
+}
+
+/* Primary variant */
+.auth-button-primary {
+  background: var(--auth-dark-text-secondary);
+  color: #ffffff;
+}
+
+.auth-button-primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.auth-button-primary:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.auth-button-primary:hover {
+  background: #0f1117;
+  transform: translateY(-2px);
+  box-shadow: var(--auth-shadow-lg);
+}
+
+.auth-button-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--auth-shadow-sm);
+}
+
+.auth-button-primary:disabled {
+  background: var(--auth-gray-400);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Secondary variant */
+.auth-button-secondary {
+  background: transparent;
+  color: var(--auth-primary-color);
+  border: 1px solid var(--auth-primary-color);
+}
+
+.auth-button-secondary:hover {
+  background: var(--auth-primary-light);
+  transform: translateY(-2px);
+}
+
+.auth-button-secondary:active {
+  transform: translateY(0);
+}
+
+.auth-button-secondary:disabled {
+  border-color: var(--auth-gray-400);
+  color: var(--auth-gray-400);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ========== Responsive Styles ========== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .auth-button {
+    padding: var(--auth-space-md) var(--auth-space-xl);
+    font-size: var(--auth-font-base);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .auth-button {
+    padding: var(--auth-space-lg) var(--auth-space-xl);
+    font-size: var(--auth-font-base);
+    min-height: var(--auth-button-height);
+    letter-spacing: 0.5px;
+  }
+
+  .auth-button:hover {
+    transform: none; /* Disable hover lift on mobile */
+  }
+
+  .auth-button:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 479px) {
+  .auth-button {
+    padding: var(--auth-space-md) var(--auth-space-lg);
+    font-size: var(--auth-font-sm);
+  }
+}

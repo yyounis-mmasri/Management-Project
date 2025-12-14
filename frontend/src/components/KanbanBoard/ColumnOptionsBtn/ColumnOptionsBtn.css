@@ -4,17 +4,18 @@
 }
 
 .kanban-options-button {
-  width: 2rem;
-  height: 2rem;
+  width: 1.9rem;
+  height: 1.9rem;
   background-color: transparent;
   cursor: pointer;
-  border: 1px solid var(--kanban-border-dark);
-  border-radius: 50%;
-  padding: 0.5rem;
+  border: none;
+  border-radius: var(--radius-rounded);
+  padding: 0.3125rem;
   display: flex;
-  font-weight: bold;
+  font-weight: var(--font-bold);
   align-items: center;
   justify-content: center;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .kanban-options-button:hover {
@@ -22,28 +23,22 @@
 }
 
 .kanban-options-button img {
-  height: 1rem;
-  width: 1rem;
+  height: var(--icon-sm);
+  width: var(--icon-sm);
 }
 
 .kanban-column-options {
   position: absolute;
   top: 2rem;
   right: 0;
-  background-color: white;
+  background-color: var(--layout-bg-white);
   box-shadow: 0 4px 8px var(--kanban-status-dropdown-shadow);
-  border-radius: 0.5rem;
+  border-radius: var(--radius-md);
   z-index: 20;
-  padding: 0.5rem;
+  padding: var(--spacing-md);
   display: flex;
   flex-direction: column;
-  background: linear-gradient(
-    to bottom left,
-    rgba(246, 252, 255, 0.9) 0%,
-    rgba(255, 255, 255, 0.9) 40%,
-    rgba(255, 255, 255, 0.9) 60%,
-    rgba(255, 246, 252, 0.9) 100%
-  );
+  background: var(--workspace-dropdown-gradient);
   backdrop-filter: blur(6px);
 }
 
@@ -51,10 +46,10 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  padding: 0.5rem 1rem;
+  padding: var(--spacing-md) var(--spacing-xl);
   text-align: left;
-  border-radius: 0.3rem;
-  font-size: 0.9rem;
+  border-radius: var(--spacing-sm);
+  font-size: var(--font-size-2xl);
   display: flex;
   align-items: center;
   width: 100%;
@@ -66,7 +61,7 @@
 }
 
 .kanban-column-options button img {
-  width: 1rem;
-  height: 1rem;
-  margin-right: 0.5rem;
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+  margin-right: var(--spacing-md);
 }

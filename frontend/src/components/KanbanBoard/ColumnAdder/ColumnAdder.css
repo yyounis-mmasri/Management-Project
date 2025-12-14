@@ -1,0 +1,30 @@
+.kanban-new-column-input {
+  min-width: 21rem;
+  height: 3rem;
+  border: var(--border-gray);
+  margin: var(--spacing-xl);
+  border-radius: var(--spacing-xl);
+  padding: 0 var(--spacing-xl);
+}
+.kanban-new-column-input:focus {
+  outline: none;
+  border: 2px solid var(--kanban-input-focus-border-color);
+}
+
+.kanban-add-column-button {
+  min-width: 21rem;
+  height: 3rem;
+  border: var(--border);
+  margin: var(--spacing-xl);
+  border-radius: var(--spacing-xl);
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-black);
+  font-size: var(--font-size-4xl);
+}
+.kanban-add-column-button:hover {
+  background-color: var(--kanban-add-column-hover-bg);
+}

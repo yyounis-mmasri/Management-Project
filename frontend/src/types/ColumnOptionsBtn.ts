@@ -1,8 +1,6 @@
 import type { ColumnHeaderProps } from "./ColumnHeaderProps";
-import type { Dispatch, SetStateAction } from "react";
-import type { RefObject } from "react";
+import type { SetState } from "./CommonTypes";
 
 export interface ColumnOptionsBtnProps extends ColumnHeaderProps {
-  setIsEditable: Dispatch<SetStateAction<boolean>>;
-  containerRef: RefObject<HTMLDivElement | null>;
+  setIsEditable: SetState<boolean>;
 }
